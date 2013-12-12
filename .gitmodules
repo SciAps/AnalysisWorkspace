@@ -1,0 +1,3 @@
+[submodule "SpectrumAnalysis"]
+	path = SpectrumAnalysis
+	url = git@github.com:SciAps/SpectrumAnalysis.git
