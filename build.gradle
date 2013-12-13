@@ -1,12 +1,29 @@
 buildscript {
   repositories { mavenCentral() }
-  dependencies { classpath 'org.ajoberstar:gradle-git:0.2.3' }
+  dependencies { classpath 'org.ajoberstar:gradle-git:0.6.3' }
 }
 
 import org.ajoberstar.gradle.git.tasks.*
 
 defaultTasks 'clone', 'eclipse'
 
+
+task pull {
+	println 'pulling...'
+}
+pull.dependsOn {
+	tasks.findAll { task -> task.name.startsWith('pullLib') }
+}
+
+task pullLibCommon(type: GitPull) {
+	repoDir = file("Common")
+}
+pullLibCommon.dependsOn('cloneLibCommon')
+
+task pullLibSpectrumAnalysis(type: GitPull) {
+	repoDir = file("SpectrumAnalysis")
+}
+pullLibSpectrumAnalysis.dependsOn('cloneLibSpectrumAnalysis')
 
 task clone << {
 	println 'doing clone...'
