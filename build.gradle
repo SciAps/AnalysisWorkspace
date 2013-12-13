@@ -1,3 +1,37 @@
+buildscript {
+  repositories { mavenCentral() }
+  dependencies { classpath 'org.ajoberstar:gradle-git:0.2.3' }
+}
+
+import org.ajoberstar.gradle.git.tasks.*
+
+defaultTasks 'clone', 'eclipse'
+
+
+task clone << {
+	println 'doing clone...'
+}
+
+clone.dependsOn {
+	tasks.findAll { task -> task.name.startsWith('cloneLib')}
+}
+
+task cloneLibCommon(type: GitClone) {
+	def dest = file("Common")
+	uri = "git@github.com:SciAps/Common.git"
+	destinationPath = dest
+    bare = false
+    enabled = !dest.exists()
+}
+
+task cloneLibSpectrumAnalysis(type: GitClone) {
+	def dest = file("SpectrumAnalysis")
+	uri = "git@github.com:SciAps/SpectrumAnalysis.git"
+	destinationPath = dest
+    bare = false
+    enabled = !dest.exists()
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '1.8'
 }
