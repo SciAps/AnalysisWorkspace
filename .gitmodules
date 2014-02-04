@@ -1,0 +1,6 @@
+[submodule "Common"]
+	path = Common
+	url = git@github.com:SciAps/Common.git
+[submodule "SpectrumAnalysis"]
+	path = SpectrumAnalysis
+	url = git@github.com:SciAps/SpectrumAnalysis.git
