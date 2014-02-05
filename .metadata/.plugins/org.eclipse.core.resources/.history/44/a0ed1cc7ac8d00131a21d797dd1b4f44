@@ -1,0 +1,48 @@
+package com.sciaps.analysis;
+
+import java.io.File;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sciaps.common.data.libs.AssayTableLibrary;
+import com.sciaps.common.data.libs.FingerprintLibrary;
+import com.sciaps.common.data.libs.LayeredSpectrum;
+import com.sciaps.common.data.libs.RegionTableLibrary;
+import com.sciaps.utils.HelperFxns;
+
+public class LibsAnalyzerTests {
+
+    LibsSpectrumAnalyzer mSpectrumAnalyzer;
+    AssayTableLibrary m_assayTableLibrary;
+    FingerprintLibrary m_fingerprintLibrary;
+    RegionTableLibrary m_regionTableLibrary;
+
+    @Before
+    public void setup() {
+        m_assayTableLibrary = (AssayTableLibrary) HelperFxns.loadObjectFromFile("./data/AssayTableLibrary.bin");
+        m_fingerprintLibrary = (FingerprintLibrary) HelperFxns.loadObjectFromFile("./data/FingerprintLibrary.bin");
+        m_regionTableLibrary = (RegionTableLibrary) HelperFxns.loadObjectFromFile("./data/RegionTableLibrary.bin");
+       
+    }
+
+    @Test
+    
+    public void 
+    @Test
+    public void steel316Test() throws Exception {
+
+        File testFile = new File("./data/SS-AISI316IARM5G.csv");
+
+        // SpectrumCSVFile steelData = new SpectrumCSVFile(new
+        // File("./data/SS-AISI316IARM5G.csv"));
+        // Spectrum spectrum = new TestSpectrum(steelData.avgTests(new
+        // int[]{20,21,22,23,24,25}));
+
+        LayeredSpectrum layeredSpectrum = LayeredSpectrum.parseFromCSV(testFile, ',', 2);
+
+        // LIBAnalysisResult result = mSpectrumAnalyzer.doAnalysis(spectrum);
+        // Assert.assertNotNull(result);
+
+    }
+}

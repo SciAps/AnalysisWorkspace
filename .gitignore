@@ -6,4 +6,5 @@ SpectrumAnalysis/
 bin/
 build/
 .gradle/
+*.csv
 

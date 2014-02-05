@@ -1,0 +1,13 @@
+{
+  "C:\\Program Files\\Java\\jre8\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No class path info available for \u0027C:\\Program Files\\Java\\jre8\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\src\\main\\java": {
+    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\src\\main\\java",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\src\\main\\java\u0027. Skipped."
+  }
+}

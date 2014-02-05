@@ -1,0 +1,27 @@
+package com.sciaps.common.data.libs;
+
+import com.sciaps.utils.XYArrays;
+
+public interface LIBSSpectrumResultInterface {
+    int getNumberOfPixels();
+
+    int[] getXValuesAsPixels();
+
+    float[] getXValuesAsWavelength();
+
+    float[] getYValues();
+
+    void setYValues(float[] y);
+
+    XYArrays getXYValuesByWavelength();
+
+    XYArrays getRebinnedXYValues();
+
+    XYArrays getRebinnedXYValues(float binSize);
+
+    XYArrays getSmoothedXYValues(int nPoints, int nOrder);
+
+    String getTitle();
+
+    LIBSMeasurement getParentMeasurement();
+}

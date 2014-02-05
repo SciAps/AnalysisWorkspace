@@ -1,0 +1,60 @@
+package com.sciaps.common.libs;
+
+import com.sciaps.common.Alloy;
+import com.sciaps.common.AnalysisResult;
+import com.sciaps.common.AtomicElement;
+import com.sciaps.common.Spectrum;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+
+public class LIBAnalysisResult implements AnalysisResult {
+
+    public static class ChemResult {
+
+        public final AtomicElement element;
+        public float value;
+        public float error;
+
+        public ChemResult(AtomicElement e) {
+            this.element = e;
+        }
+
+        @Override
+        public boolean equals(Object o){
+            boolean retval = false;
+            if(o instanceof ChemResult){
+                retval = element.equals(((ChemResult) o).element);
+            }
+            return retval;
+        }
+
+        @Override
+        public int hashCode() {
+            return element.hashCode();
+        }
+    }
+
+    private Spectrum mOriginalSpectrum;
+    public HashMap<AtomicElement, ChemResult> mChemResults = new HashMap<AtomicElement, ChemResult>();
+    public ArrayList<Alloy> mBestAlloyMatches = new ArrayList<Alloy>();
+    public String mTitle;
+    public Date mTime;
+
+    public LIBAnalysisResult(Spectrum spectrum) {
+        mOriginalSpectrum = spectrum;
+    }
+
+    @Override
+    public Spectrum getInputSpectrum() {
+        return mOriginalSpectrum;
+    }
+
+    public Collection<ChemResult> getChemResults() {
+        return mChemResults.values();
+    }
+
+
+}

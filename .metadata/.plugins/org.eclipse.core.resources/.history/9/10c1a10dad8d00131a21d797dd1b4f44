@@ -1,0 +1,255 @@
+package com.sciaps.common.data.libs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.Random;
+
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+
+import com.sciaps.utils.IOUtils;
+
+public class LIBSSpectrum implements Serializable {
+
+    private static final long serialVersionUID = 5460904906363029876L;
+    public float[] m_rawData;
+    public float[] m_array_dWavelengthAxis;
+    public int m_iWavelengthCalculationType; // 0 = use axis stored in
+    // necessary to calculate a
+    // wavelength
+    // axis on the fly
+    public String m_optionalName = null;
+    // m_array_dWavelengthAxis
+    // 1 = use coefficients to
+    // calculate axis
+    private double[][] m_wavelengthCoefficients; // Holds the coefficients
+
+    private int[] m_iStitchPoints = null;
+    private transient float[] m_tempWavelengthAxisCalculatedFromCoefficients = null;
+    private int[] m_iStartingPixelsForWavelengthCalculation = null;
+
+    public LIBSSpectrum() {
+    }
+
+    public LIBSSpectrum(int numberOfPixels) {
+        m_rawData = new float[numberOfPixels];
+    }
+
+    public static int[] getPixelAxis(int numberOfPixels) {
+        int[] ret = new int[numberOfPixels];
+        for (int i = 0; i < numberOfPixels; i++) {
+            ret[i] = i;
+        }
+        return ret;
+    }
+
+    public static LIBSSpectrum createRandomSpectrum(int numberOfPixels, int maxVal) {
+        LIBSSpectrum ret = new LIBSSpectrum(numberOfPixels);
+        int prevValue = maxVal / 2;
+
+        Random rand = new Random();
+
+        int variance = (int) Math.round(maxVal * .05);
+
+        for (int i = 0; i < numberOfPixels; i++) {
+            int low = prevValue - variance;
+            if (low < 0) {
+                low = 0;
+            }
+            int high = prevValue + variance;
+            if (high > maxVal) {
+                high = maxVal;
+            }
+            prevValue = rand.nextInt(high - low + 1) + low;
+            ret.m_rawData[i] = prevValue;
+            ret.m_array_dWavelengthAxis[i] = (2 * i) + 400;
+        }
+
+        return ret;
+    }
+
+    public static LIBSSpectrum parseFromCSV(File f) {
+        return parseFromCSV(f, ',');
+    }
+    
+    public static LIBSSpectrum parseFromCSV(File f, char sep) {
+    	return parseFromCSV(f,sep,0);
+    }
+    		
+    public static LIBSSpectrum parseFromCSV(File f, char sep, int nHeaderRows) {
+        FileReader fReader;
+        try {
+            fReader = new FileReader(f);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try {
+            reader = new CSVReader(fReader, sep);
+
+            float[] vals = new float[15000];
+            float[] wavelengths = new float[15000];
+            int ndx = 0;
+
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                if (nextLine.length < 2) {
+                    System.out.println("Error parsing Spectrum  csv");
+                    IOUtils.safeClose(reader);
+                    return null;
+                }
+
+                wavelengths[ndx] = Float.parseFloat(nextLine[0]);
+                vals[ndx] = Float.parseFloat(nextLine[1]);
+                ndx++;
+            }
+
+            LIBSSpectrum s = new LIBSSpectrum();
+
+            s.m_rawData = new float[ndx];
+            s.m_array_dWavelengthAxis = new float[ndx];
+            s.m_iWavelengthCalculationType = 0;
+
+            System.arraycopy(vals, 0, s.m_rawData, 0, ndx);
+            System.arraycopy(wavelengths, 0, s.m_array_dWavelengthAxis, 0, ndx);
+
+            return s;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(reader);
+        }
+
+        return null;
+    }
+
+    public int getNumberOfPixels() {
+        return m_rawData.length;
+    }
+
+    public void setWavelengthCoefficients(double[][] coeffs) {
+        m_wavelengthCoefficients = coeffs;
+    }
+
+    public void setStartingPixelsForWavelengthCalculation(int[] n) {
+        m_iStartingPixelsForWavelengthCalculation = n;
+    }
+
+    public final float[] getWavelengthAxis() {
+        if (m_iWavelengthCalculationType == 0) {
+            return m_array_dWavelengthAxis;
+        } else if (m_tempWavelengthAxisCalculatedFromCoefficients != null) {
+            return m_tempWavelengthAxisCalculatedFromCoefficients;
+        } else {
+            CalculateWavelengthAxisFromCoefficients();
+            return m_tempWavelengthAxisCalculatedFromCoefficients;
+        }
+    }
+
+    public int getStitchPoint(int ndx) {
+        if (ndx < m_iStitchPoints.length) {
+            return m_iStitchPoints[ndx];
+        }
+
+        return -1;
+    }
+
+    private void CalculateWavelengthAxisFromCoefficients() {
+        m_tempWavelengthAxisCalculatedFromCoefficients = new float[getNumberOfPixels()];
+        int numStages = m_wavelengthCoefficients.length;
+        int[] stageSizesInPixels = new int[numStages];
+        for (int i = 0; i < stageSizesInPixels.length; i++) {
+            if (i == 0) {
+                stageSizesInPixels[0] = m_iStitchPoints[0];
+            } else if (i == stageSizesInPixels.length - 1) {
+                stageSizesInPixels[i] = this.getNumberOfPixels() - m_iStitchPoints[i - 1];
+            } else {
+                stageSizesInPixels[i] = m_iStitchPoints[i] - m_iStitchPoints[i - 1];
+            }
+        }
+
+        int spectrumNdx = 0;
+        for (int stageNdx = 0; stageNdx < numStages; stageNdx++) {
+            for (int pixelIndex = 0; pixelIndex < stageSizesInPixels[stageNdx]; pixelIndex++) {
+                double wavelengthValue = 0;
+                for (int coeffNdx = 0; coeffNdx < m_wavelengthCoefficients[stageNdx].length; coeffNdx++) {
+                    double coeff = m_wavelengthCoefficients[stageNdx][coeffNdx];
+                    wavelengthValue += coeff * Math.pow(pixelIndex + m_iStartingPixelsForWavelengthCalculation[stageNdx], coeffNdx);
+                }
+                m_tempWavelengthAxisCalculatedFromCoefficients[spectrumNdx++] = (float) wavelengthValue;
+            }
+        }
+    }
+
+    public void introduceNoise() {
+        Random rand = new Random();
+
+        for (int i = 0; i < getNumberOfPixels(); i++) {
+            m_rawData[i] += rand.nextInt(1000);
+            // m_rawData[i] -= 50;
+            if (m_rawData[i] < 0) {
+                m_rawData[i] = 0;
+            }
+        }
+        /*
+         * double[][] coeffs = new double[3][]; coeffs[0] = new double[4];
+         * coeffs[0][0] = 346.525698495244; coeffs[0][1] = 1.43257564406372;
+         * coeffs[0][2] = -5.93235400459941E-05; coeffs[0][3] =
+         * -3.57861986497189E-08;
+         * 
+         * coeffs[1] = new double[4]; coeffs[1][0] = 883.643527654654;
+         * coeffs[1][1] = 1.73151476618611; coeffs[1][2] = -0.00017774072145505;
+         * coeffs[1][3] = -4.9543466037955E-08;
+         * 
+         * coeffs[2] = new double[4]; coeffs[2][0] = 1479.00565198138;
+         * coeffs[2][1] = 4.82457937777768; coeffs[2][2] =
+         * -0.000403030913639699; coeffs[2][3] = -2.44618178496926E-06;
+         * 
+         * m_wavelengthCoefficients = coeffs;
+         * 
+         * this.m_iWavelengthCalculationType = 1;
+         * 
+         * m_array_dWavelengthAxis = null;
+         * 
+         * m_iStartingPixelsForWavelengthCalculation = new int[3];
+         * m_iStartingPixelsForWavelengthCalculation[0] = 2;
+         * m_iStartingPixelsForWavelengthCalculation[1] = 65;
+         * m_iStartingPixelsForWavelengthCalculation[2] = 33;
+         */
+    }
+
+    public void dumpToCSV(File f) {
+        CSVWriter writer = null;
+        try {
+            writer = new CSVWriter(new FileWriter(f), ',');
+            for (int i = 0; i < this.getNumberOfPixels(); i++) {
+                String[] output = new String[2];
+                output[0] = Float.toString(this.m_array_dWavelengthAxis[i]);
+                output[1] = Float.toString(this.m_rawData[i]);
+
+                writer.writeNext(output);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(writer);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return m_optionalName;
+    }
+
+    public void setStitchPoints(int[] n) {
+        m_iStitchPoints = n;
+    }
+
+}

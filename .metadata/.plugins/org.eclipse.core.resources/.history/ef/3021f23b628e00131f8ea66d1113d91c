@@ -1,0 +1,326 @@
+package com.sciaps.common.calculation.libs;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+
+import com.sciaps.common.data.libs.AlloyBase;
+import com.sciaps.common.data.libs.AlloyBase.BASE_TYPE;
+import com.sciaps.common.data.libs.Assay;
+import com.sciaps.common.data.libs.AssayTable;
+import com.sciaps.common.data.libs.AssayTableLibrary;
+import com.sciaps.common.data.libs.BaseSpecificFingerprintLibrary;
+import com.sciaps.common.data.libs.DistilledFingerprint;
+import com.sciaps.common.data.libs.El;
+import com.sciaps.common.data.libs.Element;
+import com.sciaps.common.data.libs.FingerprintAnalysisResult;
+import com.sciaps.common.data.libs.FingerprintLibrary;
+import com.sciaps.common.data.libs.FingerprintMatch;
+import com.sciaps.common.data.libs.LIBSSpectrumResult;
+import com.sciaps.common.data.libs.Region;
+import com.sciaps.common.data.libs.RegionBasedResult;
+import com.sciaps.common.data.libs.RegionTable;
+import com.sciaps.common.data.libs.RegionTableLibrary;
+import com.sciaps.common.data.libs.SingleRegionResult;
+import com.sciaps.utils.HelperFxns;
+
+public final class LIBSCalculations {
+
+    public static String m_stringLastCalculationDebug;
+
+    private LIBSCalculations() {
+        // Hide Constructor For Static Class
+    }
+
+    public static FingerprintAnalysisResult PrimaryCalculation(LIBSSpectrumResult spectrumResult, RegionTableLibrary regionTableLibrary,
+            FingerprintLibrary fingerprintLibrary, AssayTableLibrary assayTableLibrary) {
+
+        FingerprintAnalysisResult fingerprintAnalysisResult = new FingerprintAnalysisResult();
+        fingerprintAnalysisResult.inputSpectrum = spectrumResult;
+        fingerprintAnalysisResult.alloyBase = AlloyBase.None_Base;
+
+        RegionBasedResult masterResult = createPeakIntensityResultFromSpectrumResult(spectrumResult,
+                regionTableLibrary.getRegionTableForBase(AlloyBase.Master_Base));
+        AlloyBase base = calculateAlloyBase(masterResult);
+
+        if (base.type == BASE_TYPE.ALLOY) {
+            // Store base type in result object
+            fingerprintAnalysisResult.alloyBase = base;
+
+            // Fingerprint match
+
+            RegionBasedResult baseSpecificResult = createIntensityRatioResultFromSpectrumResult(spectrumResult, regionTableLibrary.getRegionTableForBase(base));
+
+            ArrayList<FingerprintMatch> matches = new ArrayList<FingerprintMatch>();
+
+            BaseSpecificFingerprintLibrary bsLib = fingerprintLibrary.getBaseSpecificLibrary(base);
+            for (DistilledFingerprint fingerprint : bsLib.fingerprints) {
+                float matchNumber = calculateFingerprintMatchNumber(baseSpecificResult, fingerprint, base);
+                matches.add(new FingerprintMatch(fingerprint, base, matchNumber, 0));
+
+            }
+
+            Collections.sort(matches);
+            int n = 1;
+
+            // If there is at least one match, see if there is an assay in the
+            // assay table library
+
+            if (!matches.isEmpty()) {
+
+                // Store matches in analytical result object
+                fingerprintAnalysisResult.fingerprintMatches = matches;
+
+                AssayTable table = assayTableLibrary.searchForAlloy(matches.get(0).distilledFingerprint.fingerprintInfo.shortName);
+                if (table != null) {
+                    // Calculate Chemistry
+                    RegionBasedResult chemistry = generateChemistryFromAssay(baseSpecificResult, matches.get(0).distilledFingerprint, table, base);
+                    fingerprintAnalysisResult.chemistry = chemistry;
+                }
+            }
+
+        }
+
+        return fingerprintAnalysisResult;
+
+    }
+
+    public static RegionBasedResult generateChemistryFromAssay(RegionBasedResult unknownPeakIntensityRatioResult, DistilledFingerprint matchingFingerprint,
+            AssayTable assayTable, AlloyBase base) {
+        RegionBasedResult chemistry = new RegionBasedResult();
+
+        float totalChem = 0;
+        for (SingleRegionResult singleRegionResult : unknownPeakIntensityRatioResult.getAllResults()) {
+            Element e = singleRegionResult.getElement();
+            if (e.equals(base.element))
+                continue;
+
+            SingleRegionResult singleChemistry = (SingleRegionResult) HelperFxns.cloneViaSerialization(singleRegionResult);
+            // There are no emission lines in a chemistry result
+
+            singleChemistry.setEmissionLine(null);
+            float ratio = singleRegionResult.getValue() / matchingFingerprint.intensityRatios.getResultForElement(e).getValue();
+            Assay assay = assayTable.getAssayForElement(e);
+            if (assay == null || assay.getValue() == 0)
+                continue;
+
+            singleChemistry.setValue(ratio * assay.getValue());
+            totalChem += singleChemistry.getValue();
+            chemistry.addResult(singleChemistry);
+
+        }
+
+        // Set the base element to 100-sum of other elements
+
+        SingleRegionResult singleChemistry = (SingleRegionResult) HelperFxns.cloneViaSerialization(unknownPeakIntensityRatioResult
+                .getResultForElement(base.element));
+        singleChemistry.setEmissionLine(null);
+        singleChemistry.setValue(100.0f - totalChem);
+        chemistry.addResult(singleChemistry);
+
+        return chemistry;
+
+    }
+
+    public static RegionBasedResult createPeakIntensityResultFromSpectrumResult(LIBSSpectrumResult spectrumResult, RegionTable regionTable) {
+        RegionBasedResult peakIntensityResult = new RegionBasedResult();
+
+        for (int i = 0; i < regionTable.getNumberOfRegions(); i++) {
+            Region r = regionTable.getRegion(i);
+            float sum = spectrumResult.getIntensityBetweenWavelengths(r.getWaveLengthMin(), r.getWaveLengthMax());
+            float error = (float) Math.sqrt(sum / spectrumResult.m_numshots);
+            // Not sure if this error calculation belongs here, or in a separate
+            // fn
+            SingleRegionResult elResult = new SingleRegionResult(r.getElement(), r.getEmissionLine(), sum, error);
+            peakIntensityResult.addResult(elResult);
+        }
+
+        return peakIntensityResult;
+    }
+
+    public static RegionBasedResult createBaselineSubtractedPeakIntensityResultFromSpectrumResult(LIBSSpectrumResult spectrumResult, RegionTable regionTable) {
+        RegionBasedResult peakIntensityResult = new RegionBasedResult();
+
+        for (int i = 0; i < regionTable.getNumberOfRegions(); i++) {
+            Region r = regionTable.getRegion(i);
+            float sum = spectrumResult.getBaseLineSubtractdIntensityBetweenWavelengths(r.getWaveLengthMin(), r.getWaveLengthMax());
+            float sumforerror = spectrumResult.getIntensityBetweenWavelengths(r.getWaveLengthMin(), r.getWaveLengthMax());
+            float error = (float) Math.sqrt(sumforerror / spectrumResult.m_numshots);
+            /*
+             * This calculation shouldn't be repeated, it should be carried over
+             * from the last function. That would require running the last
+             * function every time, though, which we may not want
+             */
+            SingleRegionResult elResult = new SingleRegionResult(r.getElement(), r.getEmissionLine(), sum, error);
+            peakIntensityResult.addResult(elResult);
+        }
+
+        return peakIntensityResult;
+    }
+
+    public static float calculateFingerprintMatchNumber(RegionBasedResult unknownPeakIntensityRatioResult, DistilledFingerprint fingerprint, AlloyBase base) {
+        float match = 0;
+
+        float sl = 0, ll = 0, ss = 0;
+        for (SingleRegionResult single : unknownPeakIntensityRatioResult.getAllResults()) {
+            if (single.getElement().equals(base.element))
+                continue;
+            SingleRegionResult fingerprintSingleResult = fingerprint.intensityRatios.getResultForElement(single.getElement(), single.getEmissionLine());
+            float v1 = single.getValue();
+            float v2 = fingerprintSingleResult.getValue();
+            sl += v1 * v2;
+            ll += v1 * v1;
+            ss += v2 * v2;
+        }
+        match = sl * sl / ll / ss;
+
+        return match;
+    }
+
+    public static RegionBasedResult createIntensityRatioResultFromSpectrumResult(LIBSSpectrumResult spectrumResult, RegionTable regionTable) {
+        RegionBasedResult peakIntensityResult = createBaselineSubtractedPeakIntensityResultFromSpectrumResult(spectrumResult, regionTable);
+        RegionBasedResult IRResult = createIntensityRatioResultFromPeakIntensityResult(peakIntensityResult, regionTable);
+        return IRResult;
+    }
+
+    public static RegionBasedResult createIntensityRatioResultFromPeakIntensityResult(RegionBasedResult peakIntensityResult, RegionTable regionTable) {
+        RegionBasedResult intensityRatioResult = new RegionBasedResult();
+
+        for (int i = 0; i < peakIntensityResult.getNumberOfElements(); i++) {
+            SingleRegionResult elResult = new SingleRegionResult(peakIntensityResult.getResult(i));
+            Region r = regionTable.getRegion(elResult.getElement(), elResult.getEmissionLine());
+            if (r == null) {
+                System.out.println("Error creating IR result. Region table doesn't correspond to result");
+                return null;
+            }
+
+            // Master table has internal standard line xx000 which means no
+            // internal standard line. The code here should recognize that
+            SingleRegionResult internalStandardResult = peakIntensityResult.getResultForElement(r.getInternalStandardLine().getElementOfLine(),
+                    r.getInternalStandardLine());
+            // String internalStandardLine = r.getInternalStandardLineName();
+
+            if (internalStandardResult == null) {
+                System.out.println("No result for internal standard line " + r.getInternalStandardLineName());
+                return null;
+            }
+
+            elResult.setValue(peakIntensityResult.getResult(i).getValue() / internalStandardResult.getValue());
+            elResult.setError((float) ((peakIntensityResult.getResult(i).getValue() / internalStandardResult.getValue()) * Math.sqrt((peakIntensityResult
+                    .getResult(i).getError() * peakIntensityResult.getResult(i).getError() / peakIntensityResult.getResult(i).getValue() / peakIntensityResult
+                    .getResult(i).getValue())
+                    + (internalStandardResult.getError() * internalStandardResult.getError() / internalStandardResult.getValue() / internalStandardResult
+                            .getValue()))));
+
+            intensityRatioResult.addResult(elResult);
+        }
+
+        return intensityRatioResult;
+    }
+
+    public static RegionBasedResult createNormalizedRateResultFromPeakIntensityResult(RegionBasedResult peakIntensityResult, RegionTable regionTable) {
+        // This works with IR or other peak intensity results. All rates are
+        // normalized to the sum, so they add to 1
+        RegionBasedResult NormalizedResult = new RegionBasedResult();
+
+        float RateSum = 0;
+
+        for (int i = 0; i < peakIntensityResult.getNumberOfElements(); i++) {
+            if (peakIntensityResult.getResult(i).getValue() < 0) {
+                continue;
+            }
+            RateSum += peakIntensityResult.getResult(i).getValue();
+
+        }
+        if (RateSum == 0) {
+            System.out.println("Error in Rate Sum");
+            return null;
+        }
+
+        for (int i = 0; i < peakIntensityResult.getNumberOfElements(); i++) {
+            SingleRegionResult elResult = new SingleRegionResult(peakIntensityResult.getResult(i));
+            elResult.setValue(peakIntensityResult.getResult(i).getValue() / RateSum);
+            elResult.setError(peakIntensityResult.getResult(i).getError() / RateSum);
+            /*
+             * This is the wrong way to calculate. RateSum has an error on it
+             * too that needs to be propagated.
+             */
+            NormalizedResult.addResult(elResult);
+        }
+
+        return NormalizedResult;
+    }
+
+    public static AlloyBase calculateAlloyBase(RegionBasedResult peakIntensityResult) {
+        float sum = peakIntensityResult.getSumOfAllResults();
+
+        HashMap<Element, Float> intensityFractionsMap = new HashMap<Element, Float>();
+        // TODO .. check that following elements are in master region table and throw
+        // an error if they aren't.
+        Element[] elements = { El.Ti, El.Cu, El.Al, El.Fe, El.Co, El.Ni, El.Zn, El.Cr };
+
+        for (Element element: elements) {
+            
+        }
+        float TiFraction = peakIntensityResult.getResultForElement(El.Ti).getValue() / sum;
+        float CuFraction = peakIntensityResult.getResultForElement(El.Cu).getValue() / sum;
+        float AlFraction = peakIntensityResult.getResultForElement(El.Al).getValue() / sum;
+        float FeFraction = peakIntensityResult.getResultForElement(El.Fe).getValue() / sum;
+        float CoFraction = peakIntensityResult.getResultForElement(El.Co).getValue() / sum;
+        float NiFraction = peakIntensityResult.getResultForElement(El.Ni).getValue() / sum;
+        float ZnFraction = peakIntensityResult.getResultForElement(El.Zn).getValue() / sum;
+        float CrFraction = peakIntensityResult.getResultForElement(El.Cr).getValue() / sum;
+
+        // Rules for base classification
+        if (TiFraction > 0.8)
+            return AlloyBase.Ti_Base;
+        else if (CuFraction > 0.9 || (CuFraction > 0.5 && CuFraction + ZnFraction > 0.75 && NiFraction < 0.1)) // Ni
+            // alloys
+            // can
+            // have
+            // high
+            // Cu and
+            // since
+            // Cu is
+            // bright
+            // they
+            // got
+            // caught
+            // here
+            return AlloyBase.Cu_Base;
+        else if (AlFraction > 0.8 || (AlFraction > 0.5 && AlFraction + CuFraction > 0.8 && CuFraction < 0.4))
+            return AlloyBase.Al_Base;
+        else if (CrFraction > 0.3 && FeFraction > 0.25 && FeFraction + CrFraction > 0.6) // Need
+                                                                                         // to
+                                                                                         // make
+                                                                                         // sure
+            // this doesn't catch
+            // low alloy steel -
+            // maybe reverse?
+            return AlloyBase.Stainless_Base;
+        else if (FeFraction > 0.7 || FeFraction > 0.4 && (AlFraction + CuFraction > 0.1))
+            return AlloyBase.Fe_Base;
+        else if (CoFraction > 0.1 && CoFraction + CrFraction > 0.6) // May need
+                                                                    // to swap
+                                                                    // order
+                                                                    // with Ni
+            // rule
+            return AlloyBase.Co_Base;
+        else if (NiFraction > 0.4 || (NiFraction > 0.1 && (NiFraction + CuFraction > 0.8 || NiFraction + CrFraction > 0.6 || NiFraction + TiFraction > 0.5))) // Cu
+            // alloys
+            // could
+            // qualify
+            // on
+            // Ni+Cu,
+            // which
+            // is
+            // why
+            // this
+            // rule
+            // comes
+            // later
+            return AlloyBase.Ni_Base;
+        else
+            return AlloyBase.None_Base;
+    }
+}

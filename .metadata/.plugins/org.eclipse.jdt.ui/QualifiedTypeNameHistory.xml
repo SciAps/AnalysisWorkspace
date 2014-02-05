@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sciaps.common.data.libs.AssayTableLibrary"/>
+<fullyQualifiedTypeName name="com.sciaps.common.data.libs.FingerprintLibrary"/>
+<fullyQualifiedTypeName name="com.sciaps.common.data.libs.RegionTableLibrary"/>
+<fullyQualifiedTypeName name="com.sciaps.utils.HelperFxns"/>
+<fullyQualifiedTypeName name="com.sciaps.common.data.libs.LIBSSpectrum"/>
+<fullyQualifiedTypeName name="com.sciaps.common.data.libs.LIBSSpectrumResult"/>
+<fullyQualifiedTypeName name="com.sciaps.common.calculation.libs.LIBSCalculations"/>
+<fullyQualifiedTypeName name="com.sciaps.common.data.libs.FingerprintAnalysisResult"/>
+</qualifiedTypeNameHistroy>
