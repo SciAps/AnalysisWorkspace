@@ -1,0 +1,32 @@
+package com.sciaps.common.data.libs;
+
+import java.io.Serializable;
+
+public class FingerprintMatch implements Serializable, Comparable<FingerprintMatch> {
+
+    private static final long serialVersionUID = 9215147294945358588L;
+
+    public DistilledFingerprint distilledFingerprint;
+    public AlloyBase alloyBase;
+    public float matchNumber;
+    public float matchError;
+    public boolean hasRefinedMatchNumber;
+    public float refinedMatchNumber;
+    public float refinedMatchError;
+
+    public FingerprintMatch(DistilledFingerprint fingerprint, AlloyBase base, float val, float err) {
+        distilledFingerprint = fingerprint;
+        alloyBase = base;
+        matchNumber = val;
+        matchError = err;
+    }
+
+    @Override
+    public int compareTo(FingerprintMatch o) {
+        if (this.matchNumber < o.matchNumber)
+            return 1;
+        if (this.matchNumber == o.matchNumber)
+            return 0;
+        return -1;
+    }
+}

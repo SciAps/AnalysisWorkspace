@@ -9,5 +9,15 @@
     "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\src\\main\\java",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\src\\main\\java\u0027. Skipped."
+  },
+  "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\junit\\junit\\4.11\\jar\\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\\junit-4.11.jar": {
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\junit\\junit\\4.11\\jar\\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\\junit-4.11.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\junit\\junit\\4.11\\jar\\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\\junit-4.11.jar\u0027. Neither fingerprint \u00274e031bb61df09069aeb2bffb4019e7a5034a4ee0\u0027 nor symbolic name \u0027junit-4.11\u0027 are known."
+  },
+  "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar": {
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar\u0027. Neither fingerprint \u0027af40efd1aad4e7e995500e66d8832cc4e380fce5\u0027 nor symbolic name \u0027rt\u0027 are known."
   }
 }

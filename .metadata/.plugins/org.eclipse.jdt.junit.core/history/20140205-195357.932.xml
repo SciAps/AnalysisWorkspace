@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LibsAnalyzerTests" project="SpectrumAnalysis" tests="18" started="18" failures="13" errors="0" ignored="0">
+  <testsuite name="com.sciaps.analysis.LibsAnalyzerTests" time="56.284">
+    <testsuite name="[1.25 Cr 0.5 Mo !1!.csv]" time="3.395">
+      <testcase name="chemistryTests[1.25 Cr 0.5 Mo !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.395"/>
+    </testsuite>
+    <testsuite name="[1.25 Cr 0.5 Mo !2!.csv]" time="3.277">
+      <testcase name="chemistryTests[1.25 Cr 0.5 Mo !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.277">
+        <failure>
+          <expected>1.25 Cr 0.5 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[1.25 Cr] 0.5 Mo&gt; but was:&lt;[C] 0.5 Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[1.25 Cr 0.5 Mo !3!.csv]" time="3.156">
+      <testcase name="chemistryTests[1.25 Cr 0.5 Mo !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.156">
+        <failure>
+          <expected>1.25 Cr 0.5 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[1.25 Cr] 0.5 Mo&gt; but was:&lt;[C] 0.5 Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[1.25 Cr 0.5 Mo !4!.csv]" time="3.512">
+      <testcase name="chemistryTests[1.25 Cr 0.5 Mo !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.512">
+        <failure>
+          <expected>1.25 Cr 0.5 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[1.25 Cr] 0.5 Mo&gt; but was:&lt;[C] 0.5 Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[1.25 Cr 0.5 Mo !5!.csv]" time="3.252">
+      <testcase name="chemistryTests[1.25 Cr 0.5 Mo !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.252"/>
+    </testsuite>
+    <testsuite name="[1.25 Cr 0.5 Mo !6!.csv]" time="3.456">
+      <testcase name="chemistryTests[1.25 Cr 0.5 Mo !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.456">
+        <failure>
+          <expected>1.25 Cr 0.5 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[1.25 Cr] 0.5 Mo&gt; but was:&lt;[C] 0.5 Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[2.25 Cr 1 Mo !1!.csv]" time="3.183">
+      <testcase name="chemistryTests[2.25 Cr 1 Mo !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.183"/>
+    </testsuite>
+    <testsuite name="[2.25 Cr 1 Mo !2!.csv]" time="3.962">
+      <testcase name="chemistryTests[2.25 Cr 1 Mo !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.962"/>
+    </testsuite>
+    <testsuite name="[2.25 Cr 1 Mo !3!.csv]" time="2.845">
+      <testcase name="chemistryTests[2.25 Cr 1 Mo !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.845">
+        <failure>
+          <expected>2.25 Cr 1 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[2.25 Cr 1] Mo&gt; but was:&lt;[C 0.5] Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[2.25 Cr 1 Mo !4!.csv]" time="2.848">
+      <testcase name="chemistryTests[2.25 Cr 1 Mo !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.848">
+        <failure>
+          <expected>2.25 Cr 1 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[2.25 Cr 1] Mo&gt; but was:&lt;[C 0.5] Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[2.25 Cr 1 Mo !5!.csv]" time="2.902">
+      <testcase name="chemistryTests[2.25 Cr 1 Mo !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.902">
+        <failure>
+          <expected>2.25 Cr 1 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[2.25 Cr 1] Mo&gt; but was:&lt;[C 0.5] Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[2.25 Cr 1 Mo !6!.csv]" time="2.947">
+      <testcase name="chemistryTests[2.25 Cr 1 Mo !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.947">
+        <failure>
+          <expected>2.25 Cr 1 Mo</expected>
+          <actual>C 0.5 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[2.25 Cr 1] Mo&gt; but was:&lt;[C 0.5] Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[5 Cr 0.5 Mo !1!.csv]" time="2.938">
+      <testcase name="chemistryTests[5 Cr 0.5 Mo !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.938"/>
+    </testsuite>
+    <testsuite name="[5 Cr 0.5 Mo !2!.csv]" time="2.831">
+      <testcase name="chemistryTests[5 Cr 0.5 Mo !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.831">
+        <failure>
+          <expected>5 Cr 0.5 Mo</expected>
+          <actual>F91</actual>org.junit.ComparisonFailure: expected:&lt;[5 Cr 0.5 Mo]&gt; but was:&lt;[F91]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[5 Cr 0.5 Mo !3!.csv]" time="2.918">
+      <testcase name="chemistryTests[5 Cr 0.5 Mo !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.918">
+        <failure>
+          <expected>5 Cr 0.5 Mo</expected>
+          <actual>2.25 Cr 1 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[5 Cr 0.5] Mo&gt; but was:&lt;[2.25 Cr 1] Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[5 Cr 0.5 Mo !4!.csv]" time="2.949">
+      <testcase name="chemistryTests[5 Cr 0.5 Mo !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.949">
+        <failure>
+          <expected>5 Cr 0.5 Mo</expected>
+          <actual>2.25 Cr 1 Mo</actual>org.junit.ComparisonFailure: expected:&lt;[5 Cr 0.5] Mo&gt; but was:&lt;[2.25 Cr 1] Mo&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[5 Cr 0.5 Mo !5!.csv]" time="2.903">
+      <testcase name="chemistryTests[5 Cr 0.5 Mo !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="2.903">
+        <failure>
+          <expected>5 Cr 0.5 Mo</expected>
+          <actual>F91</actual>org.junit.ComparisonFailure: expected:&lt;[5 Cr 0.5 Mo]&gt; but was:&lt;[F91]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[5 Cr 0.5 Mo !6!.csv]" time="3.0">
+      <testcase name="chemistryTests[5 Cr 0.5 Mo !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="3.0">
+        <failure>
+          <expected>5 Cr 0.5 Mo</expected>
+          <actual>F91</actual>org.junit.ComparisonFailure: expected:&lt;[5 Cr 0.5 Mo]&gt; but was:&lt;[F91]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:119)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

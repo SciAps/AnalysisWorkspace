@@ -1,0 +1,222 @@
+package com.sciaps.common.data.libs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import au.com.bytecode.opencsv.CSVReader;
+
+import com.sciaps.utils.IOUtils;
+
+public class AssayTableLibrary implements Serializable {
+    private static final long serialVersionUID = -4035254241223905958L;
+    private final ArrayList<AssayTable> m_assayTables;
+
+    public AssayTableLibrary() {
+        m_assayTables = new ArrayList<AssayTable>();
+    }
+
+    public static AssayTableLibrary parseFromCSV(File f) {
+        FileReader fReader;
+        try {
+            fReader = new FileReader(f);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try {
+            reader = new CSVReader(fReader);
+            String[] nextLine = null;
+
+            // Get the header and parse the list of elements
+            // If the 2nd column displays a base, then skip it
+
+            nextLine = reader.readNext();
+
+            ArrayList<Element> elementsInHeader = new ArrayList<Element>();
+
+            int startNdx = 1;
+            boolean bBasesListed = false;
+            if (nextLine[1].equalsIgnoreCase("base")) {
+                bBasesListed = true;
+                startNdx = 2;
+            }
+
+            AssayTableLibrary lib = new AssayTableLibrary();
+
+            for (int i = startNdx; i < nextLine.length; i++) {
+                elementsInHeader.add(El.getElement(nextLine[i]));
+            }
+
+            while ((nextLine = reader.readNext()) != null) {
+                AssayTable tbl = new AssayTable(nextLine[0]);
+                if (bBasesListed) {
+                    String base = nextLine[1];
+                    tbl.base = AlloyBase.getDefaultBaseForElement(El.getElement(base));
+                }
+                for (int j = startNdx; j < nextLine.length; j++) {
+                    if (nextLine[j] == null || nextLine[j].equals("")) {
+                        continue;
+                    }
+                    float val = Float.parseFloat(nextLine[j]);
+                    if (val == 0) {
+                        continue;
+                    }
+                    Assay a = new Assay(elementsInHeader.get(j - startNdx), val, 0);
+                    tbl.addAssay(a);
+                }
+                lib.addAssayTable(tbl);
+            }
+
+            return lib;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(reader);
+        }
+
+        return null;
+    }
+
+    public static AssayTableLibrary parseFromLargeCSV(File f) {
+        FileReader fReader;
+        try {
+            fReader = new FileReader(f);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try {
+            reader = new CSVReader(fReader);
+
+            String[][] AssayTable = new String[200][100];
+            String StdName;
+            int i = 0, NumStd = 0;
+
+            AssayTableLibrary lib = new AssayTableLibrary();
+
+            // Load file into array
+
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                if (nextLine.length != 94) {
+                    // Fixed width should be ok since
+                    // we have the full table of
+                    // elements
+                    System.out.println("Error parsing Assay table csv");
+                    // newAssayTable = null;
+                    break;
+                }
+
+                for (int j = 0; j < 93; j++) {
+                    AssayTable[i][j] = nextLine[j];
+                }
+
+                // Assay a = new Assay(El.getElement(nextLine[0]),
+                // Float.parseFloat(nextLine[1]),
+                // Float.parseFloat(nextLine[2]));
+                // newAssayTable.addAssay(a);
+                i++;
+            }
+
+            NumStd = i;
+            for (i = 1; i < NumStd; i++) {
+                StdName = AssayTable[i][0];
+                AssayTable tbl = new AssayTable(StdName);
+
+                for (int j = 2; j < 93; j++) {
+                    if (AssayTable[i][j] == null || AssayTable[i][j].equals("")) {
+                        continue;
+                    }
+                    float val = Float.parseFloat(AssayTable[i][j]);
+                    if (val == 0) {
+                        continue;
+                    }
+                    Assay a = new Assay(El.getElement(AssayTable[0][j]), val, 0);
+                    tbl.addAssay(a);
+                }
+                lib.addAssayTable(tbl);
+            }
+
+            return lib;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(reader);
+        }
+
+        return null;
+    }
+
+    public ArrayList<AssayTable> getAssayTables() {
+        return m_assayTables;
+    }
+
+    public void addAssayTable(AssayTable r) {
+        m_assayTables.add(r);
+    }
+
+    public AssayTable getAssayTable(int n) {
+        if (n >= 0 && n < m_assayTables.size()) {
+            return m_assayTables.get(n);
+        }
+        return null;
+    }
+
+    public int getNumberOfAssayTables() {
+        return m_assayTables.size();
+    }
+
+    public void removeAssayTable(int n) {
+        if (n >= 0 && n < m_assayTables.size()) {
+            m_assayTables.remove(n);
+        }
+    }
+
+    public void addTablesFromLibrary(AssayTableLibrary l) {
+        for (int i = 0; i < l.getNumberOfAssayTables(); i++) {
+            this.addAssayTable(l.getAssayTable(i));
+        }
+    }
+
+    public AssayTable searchForAlloy(String s) {
+        for (AssayTable table : m_assayTables) {
+            if (table.getName().equalsIgnoreCase(s))
+                return table;
+
+        }
+
+        return null;
+    }
+
+    public void dumpCSVsToFingeprintDirectories() {
+        String rootDirectory = "./fingerprints/factory/";
+
+        for (AssayTable table : m_assayTables) {
+            String baseSpecificDirectory = rootDirectory + table.base.nameForFingerprintDirectory + "/";
+            File csvFile = new File(baseSpecificDirectory + table.getName() + ".asy");
+            table.dumpToCSV(csvFile);
+        }
+    }
+
+    public void loadAssaysFromFingerprintDirectories() {
+        String rootDirectory = "./fingerprints/factory/";
+
+        for (AlloyBase base : AlloyBase.getDefaultAlloyBases()) {
+            File baseSpecificDirectory = new File(rootDirectory + base.nameForFingerprintDirectory);
+            for (File asyFile : baseSpecificDirectory.listFiles(new FilenameFilter("*.asy"))) {
+
+            }
+
+        }
+    }
+}

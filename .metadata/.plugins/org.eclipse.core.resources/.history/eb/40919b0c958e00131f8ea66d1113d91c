@@ -1,0 +1,121 @@
+package com.sciaps.common.data.libs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import au.com.bytecode.opencsv.CSVReader;
+
+import com.sciaps.utils.HelperFxns;
+import com.sciaps.utils.IOUtils;
+
+public class LayeredSpectrum extends LIBSSpectrumLibrary implements Serializable {
+    private static final long serialVersionUID = 3379954846808836853L;
+    private String m_name;
+
+    public static LayeredSpectrum parseFromCSV(File f, char sep, int nHeaderRows) throws IOException {
+        FileReader fReader;
+        try {
+            fReader = new FileReader(f);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try {
+            reader = new CSVReader(fReader, sep);
+
+            ArrayList<float[]> vals = new ArrayList<float[]>();
+            ArrayList<float[]> wavelengths = new ArrayList<float[]>();
+
+            int rowNdx = -1;
+            int nLayers = -1;
+
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                rowNdx++;
+                if (rowNdx < nHeaderRows) {
+                    continue;
+                }
+
+                if (rowNdx == nHeaderRows) {
+                    nLayers = nextLine.length - 1;
+                    for (int i = 0; i < nLayers; i++) {
+                        vals.add(new float[12000]);
+                        wavelengths.add(new float[12000]);
+                    }
+                }
+
+                for (int layerNdx = 0; layerNdx < nLayers; layerNdx++) {
+                    wavelengths.get(layerNdx)[rowNdx - nHeaderRows] = Float.parseFloat(nextLine[0]);
+                    vals.get(layerNdx)[rowNdx - nHeaderRows] = Float.parseFloat(nextLine[layerNdx + 1]);
+                }
+            }
+
+            LayeredSpectrum coll = new LayeredSpectrum();
+            for (int i = 0; i < nLayers; i++) {
+                LIBSSpectrum s = new LIBSSpectrum();
+
+                s.m_rawData = vals.get(i);
+                s.m_array_dWavelengthAxis = wavelengths.get(i);
+                s.m_iWavelengthCalculationType = 0;
+
+                coll.addSpectrum(s);
+            }
+
+            return coll;
+        } finally {
+            IOUtils.safeClose(reader);
+        }
+    }
+
+    public String getName() {
+        return m_name;
+    }
+
+    public void setName(String name) {
+        m_name = name;
+    }
+
+    public LIBSSpectrum getAverage(int minNdx, int maxNdx) {
+        if (m_spectra.size() < maxNdx) {
+            System.out.println("Spectrum shot out of range");
+
+            return null;
+        }
+
+        if (minNdx == maxNdx) {
+            return m_spectra.get(minNdx);
+        }
+
+        LIBSSpectrum retSpectra = (LIBSSpectrum) HelperFxns.cloneViaSerialization(m_spectra.get(minNdx));
+
+        // Replace y values with average
+        float[] newY = new float[retSpectra.getNumberOfPixels()];
+
+        float nSpectra = (float) (maxNdx - minNdx + 1);
+
+        for (int spectraNdx = minNdx; spectraNdx <= maxNdx; spectraNdx++) {
+            for (int pixelNdx = 0; pixelNdx < retSpectra.getNumberOfPixels(); pixelNdx++) {
+                newY[pixelNdx] += m_spectra.get(spectraNdx).m_rawData[pixelNdx] / nSpectra;
+            }
+        }
+
+        retSpectra.m_rawData = newY;
+
+        return retSpectra;
+    }
+
+    @Override
+    public String toString() {
+        return m_name;
+    }
+
+    public LIBSSpectrum getAverage() {
+        return getAverage(0, m_spectra.size() - 1);
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LibsAnalyzerTests" project="SpectrumAnalysis" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.sciaps.analysis.LibsAnalyzerTests" time="1.372">
+    <testsuite name="[32X SEB3 !1!.csv]" time="1.372">
+      <testcase name="chemistryTests[32X SEB3 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.372"/>
+    </testsuite>
+  </testsuite>
+</testrun>

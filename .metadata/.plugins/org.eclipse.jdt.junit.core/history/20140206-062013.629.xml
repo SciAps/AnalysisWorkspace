@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LibsAnalyzerTests" project="SpectrumAnalysis" tests="90" started="90" failures="3" errors="0" ignored="0">
+  <testsuite name="com.sciaps.analysis.LibsAnalyzerTests" time="110.149">
+    <testsuite name="[32X SEB3 !1!.csv]" time="1.516">
+      <testcase name="chemistryTests[32X SEB3 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.516"/>
+    </testsuite>
+    <testsuite name="[32X SEB3 !2!.csv]" time="1.334">
+      <testcase name="chemistryTests[32X SEB3 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.334"/>
+    </testsuite>
+    <testsuite name="[32X SEB3 !3!.csv]" time="1.228">
+      <testcase name="chemistryTests[32X SEB3 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.228"/>
+    </testsuite>
+    <testsuite name="[32X SEB3 !4!.csv]" time="1.275">
+      <testcase name="chemistryTests[32X SEB3 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.275"/>
+    </testsuite>
+    <testsuite name="[32X SEB3 !5!.csv]" time="1.256">
+      <testcase name="chemistryTests[32X SEB3 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.256"/>
+    </testsuite>
+    <testsuite name="[32X SEB3 !6!.csv]" time="1.214">
+      <testcase name="chemistryTests[32X SEB3 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.214"/>
+    </testsuite>
+    <testsuite name="[36X CN1 !1!.csv]" time="1.209">
+      <testcase name="chemistryTests[36X CN1 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.209"/>
+    </testsuite>
+    <testsuite name="[36X CN1 !2!.csv]" time="1.182">
+      <testcase name="chemistryTests[36X CN1 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.182"/>
+    </testsuite>
+    <testsuite name="[36X CN1 !3!.csv]" time="1.166">
+      <testcase name="chemistryTests[36X CN1 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.166"/>
+    </testsuite>
+    <testsuite name="[36X CN1 !4!.csv]" time="1.209">
+      <testcase name="chemistryTests[36X CN1 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.209"/>
+    </testsuite>
+    <testsuite name="[36X CN1 !5!.csv]" time="1.169">
+      <testcase name="chemistryTests[36X CN1 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.169"/>
+    </testsuite>
+    <testsuite name="[36X CN1 !6!.csv]" time="1.203">
+      <testcase name="chemistryTests[36X CN1 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.203"/>
+    </testsuite>
+    <testsuite name="[36X CN3 !1!.csv]" time="1.213">
+      <testcase name="chemistryTests[36X CN3 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.213"/>
+    </testsuite>
+    <testsuite name="[36X CN3 !2!.csv]" time="1.202">
+      <testcase name="chemistryTests[36X CN3 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.202"/>
+    </testsuite>
+    <testsuite name="[36X CN3 !3!.csv]" time="1.151">
+      <testcase name="chemistryTests[36X CN3 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.151"/>
+    </testsuite>
+    <testsuite name="[36X CN3 !4!.csv]" time="1.215">
+      <testcase name="chemistryTests[36X CN3 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.215"/>
+    </testsuite>
+    <testsuite name="[36X CN3 !5!.csv]" time="1.305">
+      <testcase name="chemistryTests[36X CN3 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.305"/>
+    </testsuite>
+    <testsuite name="[36X CN3 !6!.csv]" time="1.319">
+      <testcase name="chemistryTests[36X CN3 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.319"/>
+    </testsuite>
+    <testsuite name="[36X CN6 !1!.csv]" time="1.357">
+      <testcase name="chemistryTests[36X CN6 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.357"/>
+    </testsuite>
+    <testsuite name="[36X CN6 !2!.csv]" time="1.215">
+      <testcase name="chemistryTests[36X CN6 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.215"/>
+    </testsuite>
+    <testsuite name="[36X CN6 !3!.csv]" time="1.195">
+      <testcase name="chemistryTests[36X CN6 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.195"/>
+    </testsuite>
+    <testsuite name="[36X CN6 !4!.csv]" time="1.224">
+      <testcase name="chemistryTests[36X CN6 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.224"/>
+    </testsuite>
+    <testsuite name="[36X CN6 !5!.csv]" time="1.595">
+      <testcase name="chemistryTests[36X CN6 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.595"/>
+    </testsuite>
+    <testsuite name="[36X CN6 !6!.csv]" time="1.468">
+      <testcase name="chemistryTests[36X CN6 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.468">
+        <failure>java.lang.AssertionError: expected:&lt;Copper&gt; but was:&lt;Nickel&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:743)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:117)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[CDA 314 !1!.csv]" time="1.332">
+      <testcase name="chemistryTests[CDA 314 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.332"/>
+    </testsuite>
+    <testsuite name="[CDA 314 !2!.csv]" time="1.291">
+      <testcase name="chemistryTests[CDA 314 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.291">
+        <failure>
+          <expected>CDA 314</expected>
+          <actual>CDA 836</actual>org.junit.ComparisonFailure: expected:&lt;CDA [314]&gt; but was:&lt;CDA [836]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:121)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[CDA 314 !3!.csv]" time="1.258">
+      <testcase name="chemistryTests[CDA 314 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.258"/>
+    </testsuite>
+    <testsuite name="[CDA 314 !4!.csv]" time="1.152">
+      <testcase name="chemistryTests[CDA 314 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.152"/>
+    </testsuite>
+    <testsuite name="[CDA 314 !5!.csv]" time="1.295">
+      <testcase name="chemistryTests[CDA 314 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.295"/>
+    </testsuite>
+    <testsuite name="[CDA 314 !6!.csv]" time="1.249">
+      <testcase name="chemistryTests[CDA 314 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.249">
+        <failure>
+          <expected>CDA 314</expected>
+          <actual>CDA 836</actual>org.junit.ComparisonFailure: expected:&lt;CDA [314]&gt; but was:&lt;CDA [836]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:121)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[CDA 360 !1!.csv]" time="1.186">
+      <testcase name="chemistryTests[CDA 360 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.186"/>
+    </testsuite>
+    <testsuite name="[CDA 360 !2!.csv]" time="1.381">
+      <testcase name="chemistryTests[CDA 360 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.381"/>
+    </testsuite>
+    <testsuite name="[CDA 360 !3!.csv]" time="1.165">
+      <testcase name="chemistryTests[CDA 360 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.165"/>
+    </testsuite>
+    <testsuite name="[CDA 360 !4!.csv]" time="1.252">
+      <testcase name="chemistryTests[CDA 360 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.252"/>
+    </testsuite>
+    <testsuite name="[CDA 360 !5!.csv]" time="1.176">
+      <testcase name="chemistryTests[CDA 360 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.176"/>
+    </testsuite>
+    <testsuite name="[CDA 360 !6!.csv]" time="1.27">
+      <testcase name="chemistryTests[CDA 360 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.27"/>
+    </testsuite>
+    <testsuite name="[CDA 464 !1!.csv]" time="1.191">
+      <testcase name="chemistryTests[CDA 464 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.191"/>
+    </testsuite>
+    <testsuite name="[CDA 464 !2!.csv]" time="1.145">
+      <testcase name="chemistryTests[CDA 464 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.145"/>
+    </testsuite>
+    <testsuite name="[CDA 464 !3!.csv]" time="1.177">
+      <testcase name="chemistryTests[CDA 464 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.177"/>
+    </testsuite>
+    <testsuite name="[CDA 464 !4!.csv]" time="1.224">
+      <testcase name="chemistryTests[CDA 464 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.224"/>
+    </testsuite>
+    <testsuite name="[CDA 464 !5!.csv]" time="1.627">
+      <testcase name="chemistryTests[CDA 464 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.627"/>
+    </testsuite>
+    <testsuite name="[CDA 464 !6!.csv]" time="1.141">
+      <testcase name="chemistryTests[CDA 464 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.141"/>
+    </testsuite>
+    <testsuite name="[CDA 510 !1!.csv]" time="1.23">
+      <testcase name="chemistryTests[CDA 510 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.23"/>
+    </testsuite>
+    <testsuite name="[CDA 510 !2!.csv]" time="1.159">
+      <testcase name="chemistryTests[CDA 510 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.159"/>
+    </testsuite>
+    <testsuite name="[CDA 510 !3!.csv]" time="1.157">
+      <testcase name="chemistryTests[CDA 510 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.157"/>
+    </testsuite>
+    <testsuite name="[CDA 510 !4!.csv]" time="1.372">
+      <testcase name="chemistryTests[CDA 510 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.372"/>
+    </testsuite>
+    <testsuite name="[CDA 510 !5!.csv]" time="1.281">
+      <testcase name="chemistryTests[CDA 510 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.281"/>
+    </testsuite>
+    <testsuite name="[CDA 510 !6!.csv]" time="1.152">
+      <testcase name="chemistryTests[CDA 510 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.152"/>
+    </testsuite>
+    <testsuite name="[CDA 655 !1!.csv]" time="1.134">
+      <testcase name="chemistryTests[CDA 655 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.134"/>
+    </testsuite>
+    <testsuite name="[CDA 655 !2!.csv]" time="1.132">
+      <testcase name="chemistryTests[CDA 655 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.132"/>
+    </testsuite>
+    <testsuite name="[CDA 655 !3!.csv]" time="1.161">
+      <testcase name="chemistryTests[CDA 655 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.161"/>
+    </testsuite>
+    <testsuite name="[CDA 655 !4!.csv]" time="1.152">
+      <testcase name="chemistryTests[CDA 655 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.152"/>
+    </testsuite>
+    <testsuite name="[CDA 655 !5!.csv]" time="1.141">
+      <testcase name="chemistryTests[CDA 655 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.141"/>
+    </testsuite>
+    <testsuite name="[CDA 655 !6!.csv]" time="1.14">
+      <testcase name="chemistryTests[CDA 655 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.14"/>
+    </testsuite>
+    <testsuite name="[CDA 836 !1!.csv]" time="1.147">
+      <testcase name="chemistryTests[CDA 836 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.147"/>
+    </testsuite>
+    <testsuite name="[CDA 836 !2!.csv]" time="1.156">
+      <testcase name="chemistryTests[CDA 836 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.156"/>
+    </testsuite>
+    <testsuite name="[CDA 836 !3!.csv]" time="1.16">
+      <testcase name="chemistryTests[CDA 836 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.16"/>
+    </testsuite>
+    <testsuite name="[CDA 836 !4!.csv]" time="1.119">
+      <testcase name="chemistryTests[CDA 836 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.119"/>
+    </testsuite>
+    <testsuite name="[CDA 836 !5!.csv]" time="1.11">
+      <testcase name="chemistryTests[CDA 836 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.11"/>
+    </testsuite>
+    <testsuite name="[CDA 836 !6!.csv]" time="1.159">
+      <testcase name="chemistryTests[CDA 836 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.159"/>
+    </testsuite>
+    <testsuite name="[CDA 937 !1!.csv]" time="1.402">
+      <testcase name="chemistryTests[CDA 937 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.402"/>
+    </testsuite>
+    <testsuite name="[CDA 937 !2!.csv]" time="1.202">
+      <testcase name="chemistryTests[CDA 937 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.202"/>
+    </testsuite>
+    <testsuite name="[CDA 937 !3!.csv]" time="1.168">
+      <testcase name="chemistryTests[CDA 937 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.168"/>
+    </testsuite>
+    <testsuite name="[CDA 937 !4!.csv]" time="1.203">
+      <testcase name="chemistryTests[CDA 937 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.203"/>
+    </testsuite>
+    <testsuite name="[CDA 937 !5!.csv]" time="1.165">
+      <testcase name="chemistryTests[CDA 937 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.165"/>
+    </testsuite>
+    <testsuite name="[CDA 937 !6!.csv]" time="1.171">
+      <testcase name="chemistryTests[CDA 937 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.171"/>
+    </testsuite>
+    <testsuite name="[CDA 954 !1!.csv]" time="1.175">
+      <testcase name="chemistryTests[CDA 954 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.175"/>
+    </testsuite>
+    <testsuite name="[CDA 954 !2!.csv]" time="1.23">
+      <testcase name="chemistryTests[CDA 954 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.23"/>
+    </testsuite>
+    <testsuite name="[CDA 954 !3!.csv]" time="1.198">
+      <testcase name="chemistryTests[CDA 954 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.198"/>
+    </testsuite>
+    <testsuite name="[CDA 954 !4!.csv]" time="1.164">
+      <testcase name="chemistryTests[CDA 954 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.164"/>
+    </testsuite>
+    <testsuite name="[CDA 954 !5!.csv]" time="1.206">
+      <testcase name="chemistryTests[CDA 954 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.206"/>
+    </testsuite>
+    <testsuite name="[CDA 954 !6!.csv]" time="1.17">
+      <testcase name="chemistryTests[CDA 954 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.17"/>
+    </testsuite>
+    <testsuite name="[CDA 955 !1!.csv]" time="1.186">
+      <testcase name="chemistryTests[CDA 955 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.186"/>
+    </testsuite>
+    <testsuite name="[CDA 955 !2!.csv]" time="1.18">
+      <testcase name="chemistryTests[CDA 955 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.18"/>
+    </testsuite>
+    <testsuite name="[CDA 955 !3!.csv]" time="1.173">
+      <testcase name="chemistryTests[CDA 955 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.173"/>
+    </testsuite>
+    <testsuite name="[CDA 955 !4!.csv]" time="1.172">
+      <testcase name="chemistryTests[CDA 955 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.172"/>
+    </testsuite>
+    <testsuite name="[CDA 955 !5!.csv]" time="1.143">
+      <testcase name="chemistryTests[CDA 955 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.143"/>
+    </testsuite>
+    <testsuite name="[CDA 955 !6!.csv]" time="1.128">
+      <testcase name="chemistryTests[CDA 955 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.128"/>
+    </testsuite>
+    <testsuite name="[CTIF LH1-1 !1!.csv]" time="1.132">
+      <testcase name="chemistryTests[CTIF LH1-1 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.132"/>
+    </testsuite>
+    <testsuite name="[CTIF LH1-1 !2!.csv]" time="1.139">
+      <testcase name="chemistryTests[CTIF LH1-1 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.139"/>
+    </testsuite>
+    <testsuite name="[CTIF LH1-1 !3!.csv]" time="1.337">
+      <testcase name="chemistryTests[CTIF LH1-1 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.337"/>
+    </testsuite>
+    <testsuite name="[CTIF LH1-1 !4!.csv]" time="1.403">
+      <testcase name="chemistryTests[CTIF LH1-1 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.403"/>
+    </testsuite>
+    <testsuite name="[CTIF LH1-1 !5!.csv]" time="1.247">
+      <testcase name="chemistryTests[CTIF LH1-1 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.247"/>
+    </testsuite>
+    <testsuite name="[CTIF LH1-1 !6!.csv]" time="1.201">
+      <testcase name="chemistryTests[CTIF LH1-1 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.201"/>
+    </testsuite>
+    <testsuite name="[IMN WB1 !1!.csv]" time="1.17">
+      <testcase name="chemistryTests[IMN WB1 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.17"/>
+    </testsuite>
+    <testsuite name="[IMN WB1 !2!.csv]" time="1.224">
+      <testcase name="chemistryTests[IMN WB1 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.224"/>
+    </testsuite>
+    <testsuite name="[IMN WB1 !3!.csv]" time="1.15">
+      <testcase name="chemistryTests[IMN WB1 !3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.15"/>
+    </testsuite>
+    <testsuite name="[IMN WB1 !4!.csv]" time="1.328">
+      <testcase name="chemistryTests[IMN WB1 !4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.328"/>
+    </testsuite>
+    <testsuite name="[IMN WB1 !5!.csv]" time="1.202">
+      <testcase name="chemistryTests[IMN WB1 !5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.202"/>
+    </testsuite>
+    <testsuite name="[IMN WB1 !6!.csv]" time="1.182">
+      <testcase name="chemistryTests[IMN WB1 !6!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="1.182"/>
+    </testsuite>
+  </testsuite>
+</testrun>

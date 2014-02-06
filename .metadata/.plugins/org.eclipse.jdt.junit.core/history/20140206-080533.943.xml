@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LibsAnalyzerTests" project="SpectrumAnalysis" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.sciaps.analysis.LibsAnalyzerTests" time="2.446">
+    <testsuite name="[Alloy 400!1!.csv]" time="0.671">
+      <testcase name="chemistryTests[Alloy 400!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.671"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!3!.csv]" time="0.452">
+      <testcase name="chemistryTests[Alloy 400!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.452"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!4!.csv]" time="0.333">
+      <testcase name="chemistryTests[Alloy 400!4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.333"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!5!.csv]" time="0.374">
+      <testcase name="chemistryTests[Alloy 400!5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.374"/>
+    </testsuite>
+    <testsuite name="[Alloy 500!1!.csv]" time="0.341">
+      <testcase name="chemistryTests[Alloy 500!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.341"/>
+    </testsuite>
+    <testsuite name="[Alloy 500!2!.csv]" time="0.275">
+      <testcase name="chemistryTests[Alloy 500!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.275"/>
+    </testsuite>
+  </testsuite>
+</testrun>

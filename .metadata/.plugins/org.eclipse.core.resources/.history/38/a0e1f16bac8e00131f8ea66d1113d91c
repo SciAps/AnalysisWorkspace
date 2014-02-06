@@ -1,0 +1,233 @@
+package com.sciaps.common.data.libs;
+
+import com.sciaps.utils.IOUtils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+
+public class AssayTable implements Serializable, Cloneable
+{
+    private static final long serialVersionUID = -4814702928065358609L;
+    private ArrayList<Assay> m_assays = new ArrayList<Assay>();
+    private Date m_dateModified;
+    private String name;
+    public AlloyBase base;
+
+    public AssayTable(String name)
+    {
+        this.name = name;
+    }
+
+    public static AssayTable parseFromCSV(File f)
+    {
+        FileReader fReader;
+        try
+        {
+            fReader = new FileReader(f);
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try
+        {
+            reader = new CSVReader(fReader);
+
+            AssayTable newAssayTable = new AssayTable(f.getName());
+
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null)
+            {
+                if (nextLine.length != 3)
+                {
+                    System.out.println("Error parsing Assay table csv");
+                    newAssayTable = null;
+                    break;
+                }
+                Assay a = new Assay(El.getElement(nextLine[0]), Float.parseFloat(nextLine[1]), Float.parseFloat(nextLine[2]));
+                newAssayTable.addAssay(a);
+            }
+
+            return newAssayTable;
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            IOUtils.safeClose(reader);
+        }
+
+        return null;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException
+    {
+        AssayTable t = new AssayTable(this.name);
+        t.m_dateModified = (Date) m_dateModified.clone();
+        t.m_assays = new ArrayList<Assay>();
+        for (int i = 0; i < this.m_assays.size(); i++)
+        {
+            t.m_assays.add((Assay) this.m_assays.get(i).clone());
+        }
+
+        return t;
+    }
+
+    @Override
+    public String toString()
+    {
+        return name;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void addAssay(Assay r)
+    {
+        m_assays.add(r);
+        m_dateModified = new Date(System.currentTimeMillis());
+    }
+
+    public void removeRegion(Assay r)
+    {
+        m_assays.remove(r);
+        m_dateModified = new Date(System.currentTimeMillis());
+    }
+
+    public void removeAssay(int n)
+    {
+        if (n < m_assays.size() && n >= 0)
+        {
+            m_assays.remove(n);
+        }
+    }
+
+    public final ArrayList<Assay> getAssays()
+    {
+        return m_assays;
+    }
+
+    public final Assay getAssayForElement(Element e)
+    {
+        for (int i = 0; i < m_assays.size(); i++)
+        {
+            if (e.compareTo(m_assays.get(i).getElement()) == 0)
+            {
+                return m_assays.get(i);
+            }
+        }
+
+        return null;
+    }
+
+    public int getNumberOfAssays()
+    {
+        return m_assays.size();
+    }
+
+    public void sortByAtomicNumber()
+    {
+        Collections.sort(m_assays, new Comparator<Assay>()
+        {
+            @Override
+            public int compare(Assay o1, Assay o2)
+            {
+                if (o1.getElement().atomicNumber < o2.getElement().atomicNumber)
+                {
+                    return -1;
+                }
+                if (o1.getElement().atomicNumber == o2.getElement().atomicNumber)
+                {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+    }
+
+    public void sortByValue()
+    {
+        Collections.sort(m_assays, new Comparator<Assay>()
+        {
+            @Override
+            public int compare(Assay o1, Assay o2)
+            {
+                if (o1.getValue() < o2.getValue())
+                {
+                    return -1;
+                }
+                if (o1.getValue() == o2.getValue())
+                {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+    }
+
+    public void sortByElementName()
+    {
+        Collections.sort(m_assays, new Comparator<Assay>()
+        {
+            @Override
+            public int compare(Assay o1, Assay o2)
+            {
+                return o1.getElement().shortName.compareToIgnoreCase(o2.getElement().shortName);
+            }
+        });
+    }
+
+    public void dumpToCSV(File f)
+    {
+        if (f.exists())
+            f.delete();
+        
+        CSVWriter writer = null;
+        try
+        {
+            writer = new CSVWriter(new FileWriter(f), ',');
+
+            for (int i = 0; i < this.getNumberOfAssays(); i++)
+            {
+                String[] output = new String[3];
+                output[0] = this.m_assays.get(i).getElement().shortName;
+                output[1] = this.m_assays.get(i).getValue().toString();
+                output[2] = this.m_assays.get(i).getError().toString();
+
+                writer.writeNext(output);
+            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            IOUtils.safeClose(writer);
+        }
+    }
+}

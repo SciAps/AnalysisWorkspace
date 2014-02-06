@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LibsAnalyzerTests" project="SpectrumAnalysis" tests="1" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="com.sciaps.analysis.LibsAnalyzerTests" incomplete="true">
+    <error>java.lang.NullPointerException&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.setup(LibsAnalyzerTests.java:81)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</error>
+    <testsuite name="[32X SEB3 !1!.csv]" incomplete="true">
+      <testcase name="chemistryTests[32X SEB3 !1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" incomplete="true"/>
+    </testsuite>
+  </testsuite>
+</testrun>

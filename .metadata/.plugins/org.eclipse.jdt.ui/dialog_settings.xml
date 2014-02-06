@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.last_focus" value="6"/>
+	<item value="true" key="ProjectSelectionDialog.show_all"/>
+	<item value="337" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x"/>
+	<item value="0" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_y"/>
+	<item value="0" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_y"/>
+	<item value="408" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_x"/>
+	<item value="0" key="org.eclipse.jdt.uiformatter_page.modify_dialog_tab_page.last_focus_index"/>
+	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space_tab_page.node"/>
+	<item value="1005" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
+	<item value="860" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
+	<item value="887" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_width"/>
+	<item value="1" key="org.eclipse.jdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
+	<item value="C:\Users\bbowe_000\Documents" key="org.eclipse.jdt.ui.codeformatter.loadpath"/>
+	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.inner"/>
+	<item value="744" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_height"/>
+	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="2" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.last_focus"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="layout" value="2"/>
 		<item value="true" key="group_libraries"/>
@@ -17,6 +34,26 @@
 		<item key="showtypes" value="true"/>
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="1"/>
+	</section>
+	<section name="JavaSearchPage">
+		<item key="HISTORY_SIZE" value="1"/>
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="11" key="INCLUDE_MASK"/>
+		<section name="HISTORY0">
+			<item key="isCaseSensitive" value="false"/>
+			<item value="" key="javaElement"/>
+			<item value="0" key="scope"/>
+			<item value="11" key="includeMask"/>
+			<item value="trimPArens" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="0" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
 	</section>
 	<section name="DialogBounds_OverrideMethodDialog">
 		<item key="DIALOG_WIDTH" value="527"/>

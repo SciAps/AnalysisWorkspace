@@ -1,0 +1,118 @@
+package com.sciaps.common.data.libs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import au.com.bytecode.opencsv.CSVReader;
+
+import com.sciaps.utils.IOUtils;
+
+public class GradeTableLibrary implements Serializable {
+
+    private static final long serialVersionUID = -257717190982280699L;
+    private final ArrayList<GradeTable> m_gradeTables;
+
+    public GradeTableLibrary() {
+        m_gradeTables = new ArrayList<GradeTable>();
+    }
+
+    public ArrayList<GradeTable> getGradeTables() {
+        return m_gradeTables;
+    }
+
+    public void addGradeTable(GradeTable r) {
+        m_gradeTables.add(r);
+    }
+
+    public GradeTable getGradeTable(int n) {
+        if (n >= 0 && n < m_gradeTables.size())
+            return m_gradeTables.get(n);
+        return null;
+    }
+
+    public int getNumberOfGradeTables() {
+        return m_gradeTables.size();
+    }
+
+    public void removeGradeTable(int n) {
+        if (n >= 0 && n < m_gradeTables.size())
+            m_gradeTables.remove(n);
+    }
+
+    public void addTablesFromLibrary(GradeTableLibrary l) {
+        for (int i = 0; i < l.getNumberOfGradeTables(); i++)
+            this.addGradeTable(l.getGradeTable(i));
+    }
+
+    public static GradeTableLibrary parseFromFullCSV(File f) {
+        GradeTableLibrary lib = new GradeTableLibrary();
+
+        FileReader fReader;
+        try {
+            fReader = new FileReader(f);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try {
+            reader = new CSVReader(fReader);
+            String[] nextLine = null;
+
+            // Column 0 = UNS
+            // Column 1 = Base type
+            // Column 2 = Grade name
+            // Column 3 = El 1 Min
+            // column 4 = El 1 Max
+            // column 5 = El 2 Min
+            // column 6 = El 2 Max
+            // ...
+
+            nextLine = reader.readNext();
+
+            ArrayList<Element> elementsInHeader = new ArrayList<Element>();
+
+            int startNdx = 3;
+            boolean bBasesListed = false;
+
+            for (int i = startNdx; i < nextLine.length; i = i + 2) {
+                String elName = nextLine[i].substring(0, 2).trim();
+                elementsInHeader.add(El.getElement(elName));
+            }
+
+            while ((nextLine = reader.readNext()) != null) {
+                GradeTable tbl = new GradeTable(nextLine[2]);
+                if (bBasesListed) {
+                    String base = nextLine[1];
+                    tbl.base = AlloyBase.getDefaultBaseForElement(El.getElement(base));
+                }
+                for (int j = startNdx; j < nextLine.length; j++) {
+                    if (nextLine[j] == null || nextLine[j].equals("")) {
+                        continue;
+                    }
+                    float val = Float.parseFloat(nextLine[j]);
+                    if (val == 0) {
+                        continue;
+                    }
+                    Assay a = new Assay(elementsInHeader.get(j - startNdx), val, 0);
+                    tbl.addAssay(a);
+                }
+                lib.addAssayTable(tbl);
+            }
+
+            return lib;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(reader);
+        }
+
+        return null;
+        return lib;
+    }
+}

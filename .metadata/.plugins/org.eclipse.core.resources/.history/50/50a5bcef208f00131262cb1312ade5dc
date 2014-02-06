@@ -1,0 +1,50 @@
+package com.sciaps.common.data.libs;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class GradeTableLibrary implements Serializable {
+
+    private static final long serialVersionUID = -257717190982280699L;
+    private final ArrayList<GradeTable> m_gradeTables;
+
+    public GradeTableLibrary() {
+	m_gradeTables = new ArrayList<GradeTable>();
+    }
+
+    public ArrayList<GradeTable> getGradeTables() {
+	return m_gradeTables;
+    }
+
+    public void addGradeTable(GradeTable r) {
+	m_gradeTables.add(r);
+    }
+
+    public GradeTable getGradeTable(int n) {
+	if (n >= 0 && n < m_gradeTables.size())
+	    return m_gradeTables.get(n);
+	return null;
+    }
+
+    public int getNumberOfGradeTables() {
+	return m_gradeTables.size();
+    }
+
+    public void removeGradeTable(int n) {
+	if (n >= 0 && n < m_gradeTables.size())
+	    m_gradeTables.remove(n);
+    }
+
+    public void addTablesFromLibrary(GradeTableLibrary l) {
+	for (int i = 0; i < l.getNumberOfGradeTables(); i++)
+	    this.addGradeTable(l.getGradeTable(i));
+    }
+    
+    public static GradeTableLibrary parseFromFullCSV(File fullCSV) {
+        GradeTableLibrary lib = new GradeTableLibrary();
+        
+        
+        return lib;
+    }
+
+}

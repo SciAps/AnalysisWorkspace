@@ -1,18 +1,5 @@
 [
   {
-    "symbolicName": "slf4j.api",
-    "version": {
-      "major": 1,
-      "minor": 7,
-      "micro": 5,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "6b262da268f8ad9eff941b25503a9198f0a0ac93",
-    "jarFileModificationDate": "2014-01-09T13:14:42.455-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.slf4j\\slf4j-api\\1.7.5\\jar\\6b262da268f8ad9eff941b25503a9198f0a0ac93\\slf4j-api-1.7.5.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "ch.qos.logback.core",
     "version": {
       "major": 1,
@@ -24,19 +11,6 @@
     "jarFileModificationDate": "2014-02-04T09:38:21.150-05:00",
     "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\ch.qos.logback\\logback-core\\1.1.0\\jar\\70a6307f7f1c0cc0bbbc56950ec5e3cbf1af39a4\\logback-core-1.1.0.jar",
     "javaRuntime": false
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "65e0ce743ee6f51198a2abd9617594035639a1d7",
-    "jarFileModificationDate": "2013-09-22T09:34:00.434-04:00",
-    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunmscapi.jar",
-    "javaRuntime": true
   },
   {
     "symbolicName": "itext-2.1.5",
@@ -62,6 +36,357 @@
     "jarFileFingerprint": "d4584b6213868c6cf0b30e205baca3db855db059",
     "jarFileModificationDate": "2013-09-22T09:34:00.143-04:00",
     "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ab0efa09332d70bec444b948a5040568d9c7a7c9",
+    "jarFileModificationDate": "2013-09-22T09:34:00.605-04:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "sunmscapi",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
+    "jarFileModificationDate": "2013-11-05T16:12:23.670-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "470cee7d36b572dc3335c23daea3fe8df44dd6d6",
+    "jarFileModificationDate": "2013-09-22T09:34:00.437-04:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "localedata",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "bc3be927c6d96fe2b53745052cd354cfa6fa5e47",
+    "jarFileModificationDate": "2013-11-05T16:12:32.614-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\localedata.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "21940af0a7ab542c774fef04f8cb1ce2dac83b5c",
+    "jarFileModificationDate": "2013-09-22T09:34:00.297-04:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\nashorn.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "dnsns",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5978bc159419ed07f2a57488d10e91f4fd1e3c40",
+    "jarFileModificationDate": "2013-11-05T16:12:23.550-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\dnsns.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.jfree.jfreechart",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 15,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1065cfdd8cd40f8f0559b4a8b324cd65496cf2bc",
+    "jarFileModificationDate": "2014-01-09T14:29:57.908-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.jfree\\jfreechart\\1.0.15\\jar\\1065cfdd8cd40f8f0559b4a8b324cd65496cf2bc\\jfreechart-1.0.15.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hamcrest-core-1.3",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "42a25dc3219429f0e5d060061f71acb49bf010a0",
+    "jarFileModificationDate": "2014-01-09T13:47:47.562-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.hamcrest\\hamcrest-core\\1.3\\jar\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jaccess",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "290db2acdf8d82a3a8c351ce030e0c19ff93b003",
+    "jarFileModificationDate": "2013-11-05T16:12:23.596-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\jaccess.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "javafx-dialogs-0.0.3",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ae525fcc74e0fbec67fe9d31f18dcc69c2e7eb45",
+    "jarFileModificationDate": "2013-11-24T19:37:41.513-05:00",
+    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\code\\commonJFX\\libs\\javafx-dialogs-0.0.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "45c12aab42546787c9007e313995c5d4143686d1",
+    "jarFileModificationDate": "2013-09-22T09:34:04.740-04:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "rt",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "af40efd1aad4e7e995500e66d8832cc4e380fce5",
+    "jarFileModificationDate": "2013-11-05T16:12:32.510-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\rt.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.google.gson",
+    "version": {
+      "major": 2,
+      "minor": 2,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "973e832af433b44c3ed11c426f2f390b29f3f3f8",
+    "jarFileModificationDate": "2014-02-04T09:37:13.189-05:00",
+    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\libs\\gson-2.2.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.jfree.jcommon",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 17,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7bcb68fde08258e59fe7bcc758c08af830fb2c1d",
+    "jarFileModificationDate": "2014-01-09T14:29:58.579-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.jfree\\jcommon\\1.0.17\\jar\\7bcb68fde08258e59fe7bcc758c08af830fb2c1d\\jcommon-1.0.17.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "opencsv-2.3",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c0ffd01065bc3fe571e1a4eb7014a03333f0663d",
+    "jarFileModificationDate": "2013-10-28T23:05:42.415-04:00",
+    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\code\\LIBSAnalysis\\libs\\opencsv-2.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "resources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4b49dbbd63bac98e1b02fd5ad398dea471cd41ed",
+    "jarFileModificationDate": "2013-11-05T16:12:23.802-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\resources.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jfr",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3800223b66f57bc4daff4bbd398a65020d901d82",
+    "jarFileModificationDate": "2013-11-05T16:12:23.730-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\jfr.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "sgfilter_v1_2r25",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0505b32bac7faef2a01e60c466a90dfb5af44dce",
+    "jarFileModificationDate": "2014-01-09T14:25:27.443-05:00",
+    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\libs\\sgfilter_v1_2r25.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "ch.qos.logback.classic",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fd33d94909eceba84aefb2385d1e0d43bde77564",
+    "jarFileModificationDate": "2014-02-04T09:38:20.915-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\ch.qos.logback\\logback-classic\\1.1.0\\jar\\fd33d94909eceba84aefb2385d1e0d43bde77564\\logback-classic-1.1.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.json.json",
+    "version": {
+      "major": 20131018,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c5b366c02a8dfca2b1d8ba1a0c4d2e666a2eeb75",
+    "jarFileModificationDate": "2014-01-09T13:14:39.896-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.json\\json\\20131018\\jar\\c5b366c02a8dfca2b1d8ba1a0c4d2e666a2eeb75\\json-20131018.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "bcprov-jdk14-138",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "de366c3243a586eb3c0e2bcde1ed9bb1bfb985ff",
+    "jarFileModificationDate": "2014-01-09T14:30:00.454-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\bouncycastle\\bcprov-jdk14\\138\\jar\\de366c3243a586eb3c0e2bcde1ed9bb1bfb985ff\\bcprov-jdk14-138.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jsse",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dce79bf6370699defcec5c104af7ceb7417cfaeb",
+    "jarFileModificationDate": "2013-11-05T16:12:30.376-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\jsse.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0795489cb29451a73f49d272ffd94a5000765299",
+    "jarFileModificationDate": "2013-09-22T09:34:00.268-04:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "junit-4.11",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4e031bb61df09069aeb2bffb4019e7a5034a4ee0",
+    "jarFileModificationDate": "2014-01-09T13:47:47.024-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\junit\\junit\\4.11\\jar\\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\\junit-4.11.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "charsets",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0b059624e2a7e7dfce075cd0313304d747301d01",
+    "jarFileModificationDate": "2013-11-05T16:12:30.011-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\charsets.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slf4j.api",
+    "version": {
+      "major": 1,
+      "minor": 7,
+      "micro": 5,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6b262da268f8ad9eff941b25503a9198f0a0ac93",
+    "jarFileModificationDate": "2014-01-09T13:14:42.455-05:00",
+    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.slf4j\\slf4j-api\\1.7.5\\jar\\6b262da268f8ad9eff941b25503a9198f0a0ac93\\slf4j-api-1.7.5.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "65e0ce743ee6f51198a2abd9617594035639a1d7",
+    "jarFileModificationDate": "2013-09-22T09:34:00.434-04:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunmscapi.jar",
     "javaRuntime": true
   },
   {
@@ -98,36 +423,23 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "ab0efa09332d70bec444b948a5040568d9c7a7c9",
-    "jarFileModificationDate": "2013-09-22T09:34:00.605-04:00",
-    "location": "C:\\Program Files\\Java\\jre8\\lib\\resources.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
     "jarFileFingerprint": "002e184a25cf2a94527bcc023ecd8359bd0abbb3",
     "jarFileModificationDate": "2013-09-22T09:34:00.550-04:00",
     "location": "C:\\Program Files\\Java\\jre8\\lib\\jfr.jar",
     "javaRuntime": true
   },
   {
-    "symbolicName": "jre",
+    "symbolicName": "sunec",
     "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "470cee7d36b572dc3335c23daea3fe8df44dd6d6",
-    "jarFileModificationDate": "2013-09-22T09:34:00.437-04:00",
-    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunpkcs11.jar",
-    "javaRuntime": true
+    "jarFileFingerprint": "95dc9053062d68cde4e8c38494cc63aefd7b0a42",
+    "jarFileModificationDate": "2013-11-05T16:12:23.625-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\sunec.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -195,29 +507,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "jre",
+    "symbolicName": "jfxrt",
     "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "21940af0a7ab542c774fef04f8cb1ce2dac83b5c",
-    "jarFileModificationDate": "2013-09-22T09:34:00.297-04:00",
-    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\nashorn.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "org.jfree.jfreechart",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 15,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "1065cfdd8cd40f8f0559b4a8b324cd65496cf2bc",
-    "jarFileModificationDate": "2014-01-09T14:29:57.908-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.jfree\\jfreechart\\1.0.15\\jar\\1065cfdd8cd40f8f0559b4a8b324cd65496cf2bc\\jfreechart-1.0.15.jar",
+    "jarFileFingerprint": "7674588744b15963b11bd7a91efb3723a15c3e78",
+    "jarFileModificationDate": "2013-11-05T16:12:33.019-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\jfxrt.jar",
     "javaRuntime": false
   },
   {
@@ -231,19 +530,6 @@
     "jarFileFingerprint": "c23708cdb9e80a144db433e23344a788a1fd6599",
     "jarFileModificationDate": "2014-01-09T13:14:43.149-05:00",
     "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\net.sf.opencsv\\opencsv\\2.3\\jar\\c23708cdb9e80a144db433e23344a788a1fd6599\\opencsv-2.3.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "hamcrest-core-1.3",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "42a25dc3219429f0e5d060061f71acb49bf010a0",
-    "jarFileModificationDate": "2014-01-09T13:47:47.562-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.hamcrest\\hamcrest-core\\1.3\\jar\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar",
     "javaRuntime": false
   },
   {
@@ -273,17 +559,17 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "jre",
+    "symbolicName": "jce",
     "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "45c12aab42546787c9007e313995c5d4143686d1",
-    "jarFileModificationDate": "2013-09-22T09:34:04.740-04:00",
-    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\localedata.jar",
-    "javaRuntime": true
+    "jarFileFingerprint": "f831655c50b92c41e366442d09511ea84270c45e",
+    "jarFileModificationDate": "2013-11-05T16:12:23.721-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\jce.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -299,32 +585,6 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "com.google.gson",
-    "version": {
-      "major": 2,
-      "minor": 2,
-      "micro": 4,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "973e832af433b44c3ed11c426f2f390b29f3f3f8",
-    "jarFileModificationDate": "2014-02-04T09:37:13.189-05:00",
-    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\libs\\gson-2.2.4.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "org.jfree.jcommon",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 17,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "7bcb68fde08258e59fe7bcc758c08af830fb2c1d",
-    "jarFileModificationDate": "2014-01-09T14:29:58.579-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.jfree\\jcommon\\1.0.17\\jar\\7bcb68fde08258e59fe7bcc758c08af830fb2c1d\\jcommon-1.0.17.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -336,6 +596,19 @@
     "jarFileModificationDate": "2013-09-22T09:34:00.157-04:00",
     "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\cldrdata.jar",
     "javaRuntime": true
+  },
+  {
+    "symbolicName": "sunjce_provider",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "97e3bcb13f325218fcf9d2286aa7ce6e8c231b7a",
+    "jarFileModificationDate": "2013-11-05T16:12:23.627-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "bcmail-jdk14-138",
@@ -377,55 +650,29 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "sgfilter_v1_2r25",
+    "symbolicName": "access-bridge-64",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "0505b32bac7faef2a01e60c466a90dfb5af44dce",
-    "jarFileModificationDate": "2014-01-09T14:25:27.443-05:00",
-    "location": "C:\\Users\\bbowe_000\\Documents\\GitHub\\AnalysisWorkspace\\Common\\libs\\sgfilter_v1_2r25.jar",
+    "jarFileFingerprint": "a22ccb0236f5d475302a3f538d923d6cf05c68cd",
+    "jarFileModificationDate": "2013-11-05T16:12:23.538-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\access-bridge-64.jar",
     "javaRuntime": false
   },
   {
-    "symbolicName": "ch.qos.logback.classic",
-    "version": {
-      "major": 1,
-      "minor": 1,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "fd33d94909eceba84aefb2385d1e0d43bde77564",
-    "jarFileModificationDate": "2014-02-04T09:38:20.915-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\ch.qos.logback\\logback-classic\\1.1.0\\jar\\fd33d94909eceba84aefb2385d1e0d43bde77564\\logback-classic-1.1.0.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "org.json.json",
-    "version": {
-      "major": 20131018,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "c5b366c02a8dfca2b1d8ba1a0c4d2e666a2eeb75",
-    "jarFileModificationDate": "2014-01-09T13:14:39.896-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\org.json\\json\\20131018\\jar\\c5b366c02a8dfca2b1d8ba1a0c4d2e666a2eeb75\\json-20131018.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "bcprov-jdk14-138",
+    "symbolicName": "zipfs",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "de366c3243a586eb3c0e2bcde1ed9bb1bfb985ff",
-    "jarFileModificationDate": "2014-01-09T14:30:00.454-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\bouncycastle\\bcprov-jdk14\\138\\jar\\de366c3243a586eb3c0e2bcde1ed9bb1bfb985ff\\bcprov-jdk14-138.jar",
+    "jarFileFingerprint": "f4150db54a3200189411d612ea21ce4a8a614bb3",
+    "jarFileModificationDate": "2013-11-05T16:12:23.672-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_45\\jre\\lib\\ext\\zipfs.jar",
     "javaRuntime": false
   },
   {
@@ -453,31 +700,5 @@
     "jarFileModificationDate": "2013-09-22T09:34:03.945-04:00",
     "location": "C:\\Program Files\\Java\\jre8\\lib\\charsets.jar",
     "javaRuntime": true
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "0795489cb29451a73f49d272ffd94a5000765299",
-    "jarFileModificationDate": "2013-09-22T09:34:00.268-04:00",
-    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\jaccess.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "junit-4.11",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "4e031bb61df09069aeb2bffb4019e7a5034a4ee0",
-    "jarFileModificationDate": "2014-01-09T13:47:47.024-05:00",
-    "location": "C:\\Users\\bbowe_000\\.gradle\\caches\\artifacts-26\\filestore\\junit\\junit\\4.11\\jar\\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\\junit-4.11.jar",
-    "javaRuntime": false
   }
 ]

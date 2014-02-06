@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LibsAnalyzerTests" project="SpectrumAnalysis" tests="32" started="32" failures="6" errors="0" ignored="0">
+  <testsuite name="com.sciaps.analysis.LibsAnalyzerTests" time="8.956">
+    <testsuite name="[1100!2!.csv]" time="0.537">
+      <testcase name="chemistryTests[1100!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.537">
+        <failure>
+          <expected>1100</expected>
+          <actual>319</actual>org.junit.ComparisonFailure: expected:&lt;[1100]&gt; but was:&lt;[319]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:132)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[1100!3!.csv]" time="0.29">
+      <testcase name="chemistryTests[1100!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.29"/>
+    </testsuite>
+    <testsuite name="[2014!2!.csv]" time="0.299">
+      <testcase name="chemistryTests[2014!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.299"/>
+    </testsuite>
+    <testsuite name="[2014!3!.csv]" time="0.283">
+      <testcase name="chemistryTests[2014!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.283"/>
+    </testsuite>
+    <testsuite name="[6061!2!.csv]" time="0.234">
+      <testcase name="chemistryTests[6061!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.234"/>
+    </testsuite>
+    <testsuite name="[6061!3!.csv]" time="0.209">
+      <testcase name="chemistryTests[6061!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.209"/>
+    </testsuite>
+    <testsuite name="[6063!2!.csv]" time="0.271">
+      <testcase name="chemistryTests[6063!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.271"/>
+    </testsuite>
+    <testsuite name="[6063!3!.csv]" time="0.235">
+      <testcase name="chemistryTests[6063!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.235"/>
+    </testsuite>
+    <testsuite name="[7050!2!.csv]" time="0.224">
+      <testcase name="chemistryTests[7050!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.224"/>
+    </testsuite>
+    <testsuite name="[7057!3!.csv]" time="0.217">
+      <testcase name="chemistryTests[7057!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.217">
+        <failure>
+          <expected>7057</expected>
+          <actual>7075</actual>org.junit.ComparisonFailure: expected:&lt;70[57]&gt; but was:&lt;70[75]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:132)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[7075!2!.csv]" time="0.269">
+      <testcase name="chemistryTests[7075!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.269"/>
+    </testsuite>
+    <testsuite name="[7075!3!.csv]" time="0.388">
+      <testcase name="chemistryTests[7075!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.388"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!1!.csv]" time="0.278">
+      <testcase name="chemistryTests[Alloy 400!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.278"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!3!.csv]" time="0.328">
+      <testcase name="chemistryTests[Alloy 400!3!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.328"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!4!.csv]" time="0.361">
+      <testcase name="chemistryTests[Alloy 400!4!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.361"/>
+    </testsuite>
+    <testsuite name="[Alloy 400!5!.csv]" time="0.273">
+      <testcase name="chemistryTests[Alloy 400!5!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.273"/>
+    </testsuite>
+    <testsuite name="[Alloy 500!1!.csv]" time="0.237">
+      <testcase name="chemistryTests[Alloy 500!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.237"/>
+    </testsuite>
+    <testsuite name="[Alloy 500!2!.csv]" time="0.259">
+      <testcase name="chemistryTests[Alloy 500!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.259"/>
+    </testsuite>
+    <testsuite name="[Alloy 600!1!.csv]" time="0.249">
+      <testcase name="chemistryTests[Alloy 600!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.249"/>
+    </testsuite>
+    <testsuite name="[Alloy 600!2!.csv]" time="0.271">
+      <testcase name="chemistryTests[Alloy 600!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.271"/>
+    </testsuite>
+    <testsuite name="[Alloy 625 !2!.csv]" time="0.324">
+      <testcase name="chemistryTests[Alloy 625 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.324"/>
+    </testsuite>
+    <testsuite name="[Alloy 625!1!.csv]" time="0.258">
+      <testcase name="chemistryTests[Alloy 625!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.258"/>
+    </testsuite>
+    <testsuite name="[Alloy 718!1!.csv]" time="0.247">
+      <testcase name="chemistryTests[Alloy 718!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.247"/>
+    </testsuite>
+    <testsuite name="[Alloy 718!2!.csv]" time="0.309">
+      <testcase name="chemistryTests[Alloy 718!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.309"/>
+    </testsuite>
+    <testsuite name="[Alloy 800!1!.csv]" time="0.199">
+      <testcase name="chemistryTests[Alloy 800!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.199">
+        <failure>java.lang.AssertionError: expected:&lt;Nickel&gt; but was:&lt;None&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:743)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:128)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[Alloy 800!IARM58B!50!!2!.csv]" time="0.215">
+      <testcase name="chemistryTests[Alloy 800!IARM58B!50!!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.215">
+        <failure>java.lang.AssertionError: expected:&lt;Nickel&gt; but was:&lt;None&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:743)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:128)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[Alloy 909 !2!.csv]" time="0.249">
+      <testcase name="chemistryTests[Alloy 909 !2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.249">
+        <failure>java.lang.AssertionError: Assay Missing&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertNotNull(Assert.java:621)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:134)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[Alloy 909!IARM203A!50!!1!.csv]" time="0.272">
+      <testcase name="chemistryTests[Alloy 909!IARM203A!50!!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.272">
+        <failure>java.lang.AssertionError: Assay Missing&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertNotNull(Assert.java:621)&#13;
+	at com.sciaps.analysis.LibsAnalyzerTests.chemistryTests(LibsAnalyzerTests.java:134)&#13;
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:606)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:127)&#13;
+	at org.junit.runners.Suite.runChild(Suite.java:26)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[Alloy B!-2IARM63C!50!!1!.csv]" time="0.259">
+      <testcase name="chemistryTests[Alloy B!-2IARM63C!50!!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.259"/>
+    </testsuite>
+    <testsuite name="[Alloy B!-2IARM63C!50!!2!.csv]" time="0.261">
+      <testcase name="chemistryTests[Alloy B!-2IARM63C!50!!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.261"/>
+    </testsuite>
+    <testsuite name="[Alloy C-276!1!.csv]" time="0.332">
+      <testcase name="chemistryTests[Alloy C-276!1!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.332"/>
+    </testsuite>
+    <testsuite name="[Alloy C-276!2!.csv]" time="0.315">
+      <testcase name="chemistryTests[Alloy C-276!2!.csv]" classname="com.sciaps.analysis.LibsAnalyzerTests" time="0.315"/>
+    </testsuite>
+  </testsuite>
+</testrun>

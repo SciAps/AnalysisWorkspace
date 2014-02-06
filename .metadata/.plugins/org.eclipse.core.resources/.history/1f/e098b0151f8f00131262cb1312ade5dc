@@ -1,0 +1,132 @@
+package com.sciaps.common.data.libs;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class AlloyBase implements Serializable {
+
+    private static final long serialVersionUID = 4635884430326932445L;
+
+    public enum BASE_TYPE {
+        ALLOY, PURE, MASTER, NONE
+    };
+
+    public BASE_TYPE type;
+    public Element element;
+
+    public String shortNameForDisplay;
+    public String longNameForDisplay;
+    public String nameForFingerprintDirectory;
+
+    public static AlloyBase None_Base = new AlloyBase(BASE_TYPE.NONE, El.H, "None", "None", "None");
+    public static AlloyBase Master_Base = new AlloyBase(BASE_TYPE.MASTER, El.H, "MASTER", "MASTER", "MASTER");
+    public static AlloyBase Fe_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Fe, "Fe", "Iron", "Fe");
+    public static AlloyBase Al_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Al, "Al", "Aluminum", "Al");
+    public static AlloyBase Ti_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Ti, "Ti", "Titanium", "Ti");
+    public static AlloyBase Cu_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Cu, "Cu", "Copper", "Cu");
+    public static AlloyBase Stainless_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Fe, "Stainless", "Stainless", "Stainless");
+    public static AlloyBase Co_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Co, "Co", "Cobalt", "Co");
+    public static AlloyBase Ni_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Ni, "Ni", "Nickel", "Ni");
+    public static AlloyBase ToolSteel_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Fe, "Tool Steel", "Tool Steel", "Tool Steel");
+    public static AlloyBase LowAlloy_Base = new AlloyBase(BASE_TYPE.ALLOY, El.Fe, "Low Alloy", "Low Alloy", "Low Alloy");
+
+    public AlloyBase(BASE_TYPE t, Element e) {
+        type = t;
+        element = e;
+        shortNameForDisplay = e.shortName + " Alloy";
+        longNameForDisplay = e.longName + " Alloy";
+        nameForFingerprintDirectory = longNameForDisplay;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((element == null) ? 0 : element.hashCode());
+        result = prime * result + ((longNameForDisplay == null) ? 0 : longNameForDisplay.hashCode());
+        result = prime * result + ((nameForFingerprintDirectory == null) ? 0 : nameForFingerprintDirectory.hashCode());
+        result = prime * result + ((shortNameForDisplay == null) ? 0 : shortNameForDisplay.hashCode());
+        result = prime * result + ((type == null) ? 0 : type.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        AlloyBase other = (AlloyBase) obj;
+        if (element == null) {
+            if (other.element != null)
+                return false;
+        } else if (!element.equals(other.element))
+            return false;
+        if (longNameForDisplay == null) {
+            if (other.longNameForDisplay != null)
+                return false;
+        } else if (!longNameForDisplay.equals(other.longNameForDisplay))
+            return false;
+        if (nameForFingerprintDirectory == null) {
+            if (other.nameForFingerprintDirectory != null)
+                return false;
+        } else if (!nameForFingerprintDirectory.equals(other.nameForFingerprintDirectory))
+            return false;
+        if (shortNameForDisplay == null) {
+            if (other.shortNameForDisplay != null)
+                return false;
+        } else if (!shortNameForDisplay.equals(other.shortNameForDisplay))
+            return false;
+        if (type != other.type)
+            return false;
+        return true;
+    }
+
+    public AlloyBase(BASE_TYPE t, Element e, String shortName, String longName, String directoryName) {
+        type = t;
+        element = e;
+        shortNameForDisplay = shortName;
+        longNameForDisplay = longName;
+        nameForFingerprintDirectory = directoryName;
+    }
+
+    public static ArrayList<AlloyBase> getDefaultAlloyBases() {
+        ArrayList<AlloyBase> bases = new ArrayList<AlloyBase>();
+
+        bases.add(None_Base);
+        bases.add(Master_Base);
+        bases.add(Fe_Base);
+        bases.add(Al_Base);
+        bases.add(Ti_Base);
+        bases.add(Cu_Base);
+        bases.add(Stainless_Base);
+        bases.add(Co_Base);
+        bases.add(Ni_Base);
+
+        return bases;
+    }
+
+    @Override
+    public String toString() {
+        return longNameForDisplay;
+    }
+
+    public static AlloyBase getDefaultBaseForElement(Element e) {
+        if (e.equals(El.Cu))
+            return Cu_Base;
+        if (e.equals(El.Ni))
+            return Ni_Base;
+        if (e.equals(El.Ti))
+            return Ti_Base;
+        if (e.equals(El.Fe))
+            return Fe_Base;
+        if (e.equals(El.Al))
+            return Al_Base;
+        if (e.equals(El.Co))
+            return Co_Base;
+
+        return None_Base;
+    }
+}

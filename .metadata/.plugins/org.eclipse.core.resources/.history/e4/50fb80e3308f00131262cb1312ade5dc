@@ -1,0 +1,213 @@
+package com.sciaps.common.data.libs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+
+import com.sciaps.utils.IOUtils;
+
+public class GradeTable implements Serializable, Cloneable {
+    private static final long serialVersionUID = 3290876046777247976L;
+    private ArrayList<GradeRange> m_grades = new ArrayList<GradeRange>();
+    private Date m_dateModified;
+    private String name;
+    public AlloyBase base;
+
+    public GradeTable(String name) {
+        this.name = name;
+    }
+
+    public static GradeTable parseFromCSV(File f) {
+        FileReader fReader;
+        try {
+            fReader = new FileReader(f);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+
+        CSVReader reader = null;
+        try {
+            reader = new CSVReader(fReader);
+
+            GradeTable newGradeTable = new GradeTable(f.getName());
+
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                if (nextLine.length != 3) {
+                    System.out.println("Error parsing Grade table csv");
+                    newGradeTable = null;
+                    break;
+                }
+                GradeRange a = new GradeRange(El.getElement(nextLine[0]), Float.parseFloat(nextLine[1]), Float.parseFloat(nextLine[2]));
+                newGradeTable.addGrade(a);
+            }
+
+            return newGradeTable;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(reader);
+        }
+
+        return null;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        GradeTable t = new GradeTable(this.name);
+        t.m_dateModified = (Date) m_dateModified.clone();
+        t.m_grades = new ArrayList<GradeRange>();
+        for (int i = 0; i < this.m_grades.size(); i++) {
+            t.m_grades.add((GradeRange) this.m_grades.get(i).clone());
+        }
+
+        return t;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void addGrade(GradeRange r) {
+        m_grades.add(r);
+        m_dateModified = new Date(System.currentTimeMillis());
+    }
+
+    public void removeRegion(GradeRange r) {
+        m_grades.remove(r);
+        m_dateModified = new Date(System.currentTimeMillis());
+    }
+
+    public void removeGrade(int n) {
+        if (n < m_grades.size() && n >= 0) {
+            m_grades.remove(n);
+        }
+    }
+
+    public final ArrayList<GradeRange> getGrades() {
+        return m_grades;
+    }
+
+    public final GradeRange getGradeForElement(Element e) {
+        for (int i = 0; i < m_grades.size(); i++) {
+            if (e.compareTo(m_grades.get(i).getElement()) == 0) {
+                return m_grades.get(i);
+            }
+        }
+
+        return null;
+    }
+
+    public int getNumberOfGrades() {
+        return m_grades.size();
+    }
+
+    public void sortByAtomicNumber() {
+        Collections.sort(m_grades, new Comparator<GradeRange>() {
+            @Override
+            public int compare(GradeRange o1, GradeRange o2) {
+                if (o1.getElement().atomicNumber < o2.getElement().atomicNumber) {
+                    return -1;
+                }
+                if (o1.getElement().atomicNumber == o2.getElement().atomicNumber) {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+    }
+
+    public void sortByMin() {
+        Collections.sort(m_grades, new Comparator<GradeRange>() {
+            @Override
+            public int compare(GradeRange o1, GradeRange o2) {
+                if (o1.getMin() < o2.getMin()) {
+                    return -1;
+                }
+                if (o1.getMin() == o2.getMin()) {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+    }
+
+    public void sortByMax() {
+        Collections.sort(m_grades, new Comparator<GradeRange>() {
+            @Override
+            public int compare(GradeRange o1, GradeRange o2) {
+                if (o1.getMax() < o2.getMax()) {
+                    return -1;
+                }
+                if (o1.getMax() == o2.getMax()) {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+    }
+
+    public void sortByElementName() {
+        Collections.sort(m_grades, new Comparator<GradeRange>() {
+            @Override
+            public int compare(GradeRange o1, GradeRange o2) {
+                return o1.getElement().shortName.compareToIgnoreCase(o2.getElement().shortName);
+            }
+        });
+    }
+
+    public void dumpToCSV(File f) {
+        CSVWriter writer = null;
+        try {
+            writer = new CSVWriter(new FileWriter(f), ',');
+
+            for (int i = 0; i < this.getNumberOfGrades(); i++) {
+                String[] output = new String[3];
+                output[0] = this.m_grades.get(i).getElement().shortName;
+                output[1] = this.m_grades.get(i).getMin().toString();
+                output[2] = this.m_grades.get(i).getMax().toString();
+
+                writer.writeNext(output);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.safeClose(writer);
+        }
+    }
+
+    public static ArrayList<Element> findNonOverlappingElements(GradeTable t1, GradeTable t2) {
+        ArrayList<Element> keyElements = new ArrayList<Element>();
+
+        for (GradeRange gr : t1.m_grades) {
+            Element e = gr.getElement();
+            // If element min is > 0 and is not in t2, then add it
+            if (gr.getMin() > 0 && t2.getGradeForElement(e) == null)
+                keyElements.add(e);
+
+        }
+
+        return keyElements;
+    }
+}

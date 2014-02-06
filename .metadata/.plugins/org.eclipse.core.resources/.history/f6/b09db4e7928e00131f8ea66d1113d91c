@@ -1,0 +1,123 @@
+package com.sciaps.common.data.libs;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+
+import com.sciaps.common.calculation.libs.LIBSCalculations;
+import com.sciaps.common.data.libs.AlloyBase.BASE_TYPE;
+import com.sciaps.utils.HelperFxns;
+
+public class FingerprintLibrary implements Serializable {
+
+    private static final long serialVersionUID = 320471066931277646L;
+    private HashMap<AlloyBase, BaseSpecificFingerprintLibrary> baseToLibraryMap;
+    private static String rootFingerprintDirectory = "./fingerprints/factory/";
+    private static String fingerprintLibraryFilename = "FingerprintLibrary.bin";
+
+    public FingerprintLibrary() {
+        baseToLibraryMap = new HashMap<AlloyBase, BaseSpecificFingerprintLibrary>();
+    }
+
+    public BaseSpecificFingerprintLibrary getBaseSpecificLibrary(AlloyBase base) {
+        return baseToLibraryMap.get(base);
+    }
+
+    public void recreateEntireLibraryFromDisk(RegionTableLibrary regionTableLibrary) {
+        for (AlloyBase base : AlloyBase.getDefaultAlloyBases()) {
+            if (base.type != BASE_TYPE.ALLOY)
+                continue;
+            String dir = rootFingerprintDirectory + base.nameForFingerprintDirectory + "/";
+            BaseSpecificFingerprintLibrary bsLibrary = createBaseSpecificLibraryFromDisk(base, dir, regionTableLibrary.getRegionTableForBase(base));
+            baseToLibraryMap.put(base, bsLibrary);
+        }
+    }
+
+    private BaseSpecificFingerprintLibrary createBaseSpecificLibraryFromDisk(AlloyBase base, String directory, RegionTable regionTable) {
+        if (base.type != BASE_TYPE.ALLOY)
+            return null;
+
+        BaseSpecificFingerprintLibrary bsLibrary = new BaseSpecificFingerprintLibrary(base, regionTable);
+
+        File fingerprintDirectory = new File(directory);
+
+        File[] files = fingerprintDirectory.listFiles();
+        if (files == null)
+            return bsLibrary;
+
+        Arrays.sort(files, new Comparator<File>() {
+            public int compare(File f1, File f2) {
+                return Long.valueOf(f1.lastModified()).compareTo(f2.lastModified());
+            }
+        });
+
+        for (final File fullFingerprintFile : files) {
+            // only parse files with the fng extension
+            if (!HelperFxns.getFileExtension(fullFingerprintFile).equals("fng"))
+                continue;
+
+            FullFingerprint fullFingerprint = (FullFingerprint) HelperFxns.loadObjectFromFile(fullFingerprintFile);
+            DistilledFingerprint distilledFingerprint = createDistilledFingerprintFromFullFingerprint(fullFingerprint, regionTable);
+            bsLibrary.fingerprints.add(distilledFingerprint);
+        }
+
+        return bsLibrary;
+    }
+
+    public void saveToDisk() {
+        HelperFxns.saveObjectToFile(this, new File(fingerprintLibraryFilename));
+    }
+
+    private DistilledFingerprint createDistilledFingerprintFromFullFingerprint(FullFingerprint fullFingerprint, RegionTable regionTable) {
+
+        RegionBasedResult r = LIBSCalculations.createIntensityRatioResultFromSpectrumResult(new LIBSSpectrumResult(fullFingerprint.measurement.m_rawSpectrum),
+                regionTable);
+        DistilledFingerprint distilled = new DistilledFingerprint(fullFingerprint.fingerprintInfo, r);
+        return distilled;
+
+    }
+
+    public static void createFingerprintsFromLayeredCSVsForAllBases(RegionTableLibrary lib) {
+        for (AlloyBase base : AlloyBase.getDefaultAlloyBases()) {
+            if (base.type != BASE_TYPE.ALLOY)
+                continue;
+            RegionTable r = lib.getRegionTableForBase(base);
+            if (r != null)
+                createFingerprintsFromLayeredCSVs(base, r);
+        }
+    }
+
+    private static void createFingerprintsFromLayeredCSVs(AlloyBase base, RegionTable r) {
+        File dir = new File(rootFingerprintDirectory + base.nameForFingerprintDirectory);
+
+        File[] files = dir.listFiles();
+        if (files == null || files.length == 0)
+            return;
+
+        for (final File fingerprintCSVFile : files) {
+            // only parse files with the .csv extension
+            if (!HelperFxns.getFileExtension(fingerprintCSVFile).equals("csv"))
+                continue;
+
+            LayeredSpectrum ls;
+            try {
+                ls = LayeredSpectrum.parseFromCSV(fingerprintCSVFile, ',', 2);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                continue;
+            }
+
+            LIBSSpectrum s = ls.getAverage();
+            LIBSSpectrumResult sr = new LIBSSpectrumResult(s);
+            FullFingerprint fingerprint = new FullFingerprint(sr.getParentMeasurement(), new FingerprintInfo(HelperFxns.trimFileExtension(fingerprintCSVFile,
+                    false)));
+
+            File fullFingerprintFilename = new File(dir + "/" + HelperFxns.trimFileExtension(fingerprintCSVFile, false) + ".fng");
+            HelperFxns.saveObjectToFile(fingerprint, fullFingerprintFilename);
+        }
+    }
+}
