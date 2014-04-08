@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.svm4j</groupId>
+  <artifactId>svm4j</artifactId>
+  <name>svm4j</name>
+  <version>0.1</version>
+  <properties>
+  	<log4j.version>1.2.16</log4j.version>
+  	<testng.version>5.8</testng.version>
+  	<apache.commons.version>2.0</apache.commons.version>
+  </properties>
+  <dependencies>
+  	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-math</artifactId>
+	    <version>${apache.commons.version}</version>
+  	</dependency>
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>${testng.version}</version>
+	    <classifier>jdk15</classifier>
+	    <scope>test</scope>
+	</dependency> 
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
+  </dependencies>
+</project>

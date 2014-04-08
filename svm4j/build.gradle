@@ -1,0 +1,45 @@
+repositories {
+    mavenCentral()
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+sourceCompatibility = JavaVersion.VERSION_1_6
+targetCompatibility = JavaVersion.VERSION_1_6
+
+archivesBaseName = 'svm4j'
+group = 'com.svm4j'
+version = '0.0.1'
+description = 'Support Vector Machine library'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.apache.commons:commons-math:2.0'
+  compile 'log4j:log4j:1.2.16'
+  testCompile 'junit:junit:4.+'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+artifacts {
+  archives sourcesJar
+}
+
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: "file://localhost/var/www/maven/")
+		}
+	}
+}
